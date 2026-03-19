@@ -32,11 +32,14 @@ tags:
 
 ### 4. ExcaliBrain
 - **Install:** Settings → Community Plugins → Browse → search "ExcaliBrain" → Install → Enable
-- **Settings → Ontology:**
-  - **Parent fields:** `orgs`, `source-org`, `funded-by`
-  - **Child fields:** `members`, `contact`, `participants`
-  - **Friend fields:** `partners-with`
-  - **Other Friend fields:** `introduced-by`, `connected-via`
+- **Settings → Ontology:** Clear all default values from each field, then enter:
+  - **Parents:** `orgs, source-org, funded-by`
+  - **Children:** `members, contact, participants`
+  - **Left-Side Friends:** `partners-with`
+  - **Right-Side Friends:** *(clear defaults, leave empty)*
+  - **Previous (Friends):** `introduced-by, connected-via`
+  - **Next (Friends):** *(clear defaults, leave empty)*
+- **Important:** The defaults (advantages, alternatives, cons, Before, After, etc.) are generic examples. Clear them all — they'll create noise in your graph if left in.
 - **Why:** Auto-generated semantic relationship graph. Click any entity, see all connections by type.
 - **How to use:** Cmd+P → "ExcaliBrain" → opens the graph centered on your current note. Click nodes to navigate. This is your primary tool for seeing the relational web.
 
@@ -71,19 +74,19 @@ Open Graph View (sidebar or Cmd+P → "Graph View"), then click the settings gea
 - Group 1: `path:People` → Blue
 - Group 2: `path:Organizations` → Green
 - Group 3: `path:Funders` → Gold/Yellow
-- Group 4: `path:Projects` → Orange
+- Group 4: `path:Projects` → Fuchsia
 - Group 5: `path:Interactions` → Gray
 
-**Display:**
-- Consider hiding Interactions in the global graph (they add visual noise). You can always filter them back in.
+**Filtering:**
+- To hide Interactions from the global graph (they add visual noise at scale), type `-path:Interactions` in the Graph View search/filter bar. Toggle the filter on or off as needed.
 - Orphan nodes: Show (helps you spot contacts you haven't linked to anything yet)
 
 ### Bases
-Bases is a core plugin (already enabled). To create views:
-1. Cmd+P → "Bases: Create new base"
-2. Set source folder and filter by `type` property
-3. Add columns from frontmatter fields
-4. Save to your preferred location
+Bases is a core plugin (already enabled). To create a view:
+1. Right-click a folder in the file explorer → "New base" — or use the command palette
+2. This creates a `.base.md` file that opens as an interactive spreadsheet (not a regular markdown page)
+3. Set the source folder and add columns from your frontmatter fields
+4. Note: if you see a regular markdown page instead of the spreadsheet UI, you may be looking at one of the archive's old placeholder files, not an actual Base
 
 **Suggested views:**
 - **All People:** Source `People/`, columns: role, orgs, cadence, owner

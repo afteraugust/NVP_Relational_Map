@@ -230,16 +230,20 @@ NVP_Relational_Map/
 
 ### 5.3 ExcaliBrain Configuration
 
-In ExcaliBrain settings → Ontology, map your frontmatter fields:
+In ExcaliBrain settings → Ontology, clear the defaults from each field and enter these:
 
-| ExcaliBrain Type | Your Fields | What It Means Visually |
-|-----------------|-------------|----------------------|
-| **Parent** | `orgs`, `source-org`, `funded-by` | "belongs to" — the entity above this one |
-| **Child** | `members`, `contact`, `participants` | "contains" — entities within this one |
-| **Friend** | `partners-with` | Peer/mutual relationships |
-| **Other Friend** | `introduced-by`, `connected-via` | Directional — how the connection was formed |
+| ExcaliBrain Field | Your Values | What It Means Visually |
+|------------------|-------------|----------------------|
+| **Parents** | `orgs, source-org, funded-by` | "belongs to" — appears above the focused node |
+| **Children** | `members, contact, participants` | "contains" — appears below the focused node |
+| **Left-Side Friends** | `partners-with` | Peer/mutual relationships — appears to the left |
+| **Right-Side Friends** | *(clear defaults, leave empty)* | Reserved for future use |
+| **Previous (Friends)** | `introduced-by, connected-via` | "how the connection was formed" — the prior link in the chain |
+| **Next (Friends)** | *(clear defaults, leave empty)* | Reserved for future use |
 
-What this gives you: navigate to a foundation and immediately see its staff contacts (children), your funder note linked to it (child/funded-by), partner orgs (friends), and who connected you (other friend). All automatic from frontmatter.
+**Important:** Clear all the default values (advantages, alternatives, cons, Before, After, etc.) from each field before entering yours. Those defaults are ExcaliBrain's generic examples and will create noise if left in.
+
+What this gives you: navigate to a foundation and immediately see its staff contacts (below), your funder note linked to it (below/funded-by), partner orgs (left), and who connected you (further left as previous). All automatic from frontmatter.
 
 ### 5.4 Templater Configuration
 
@@ -258,10 +262,12 @@ What this gives you: navigate to a foundation and immediately see its staff cont
 - `path:People` → Blue
 - `path:Organizations` → Green
 - `path:Funders` → Gold
-- `path:Projects` → Orange
-- `path:Interactions` → Gray (or hide — they add noise at scale)
+- `path:Projects` → Fuchsia
+- `path:Interactions` → Gray
 
-**Bases** — Create views after templates are set up:
+To hide Interactions from the global graph (they add visual noise at scale), type `-path:Interactions` in the Graph View filter/search bar. Toggle the filter on or off as needed.
+
+**Bases** — Create views by right-clicking a folder in the file explorer → "New base", or via the command palette. This creates a `.base.md` file that opens as an interactive spreadsheet, not a regular markdown page. Suggested views:
 - All People view (source: `People/`, columns: role, orgs, cadence, owner)
 - Funding Pipeline (source: `Funders/`, columns: status, source-org, contact, focus-areas)
 - Interaction Log (source: `Interactions/`, columns: date, participants, context, about)
