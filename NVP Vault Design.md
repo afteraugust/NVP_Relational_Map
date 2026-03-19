@@ -1,6 +1,6 @@
 # NVP Relational Map — Vault Design
 
-**Status:** Draft for review
+**Status:** Draft v2 — revised per feedback
 **Date:** 2026-03-19
 **Vault users:** August, Savannah
 
@@ -14,32 +14,31 @@ This vault is a relationship intelligence system for a small nonprofit team. It 
 2. **Surfaces the network** — shows how people, orgs, funders, and projects connect to each other, including non-obvious pathways
 3. **Keeps relationships alive** — flags who's overdue for a touchpoint based on desired communication cadence
 
-The guiding principle: **interactions are the heartbeat**. Every coffee meeting, call, email, or event you log automatically updates the relational web. The system rewards consistent small entries over periodic big data dumps.
+The guiding principle: **interactions are the heartbeat**. Every meeting, call, email, or event you log automatically updates the relational web. The system rewards consistent small entries over periodic big data dumps.
 
 ---
 
 ## 2. Entity Types
 
-Six types of notes, each with a `type` property in frontmatter:
+Five types of notes, each with a `type` property in frontmatter:
 
 | Type | What it is | One note per... |
 |------|-----------|-----------------|
 | `person` | Anyone in your network | Individual person |
-| `organization` | Business, nonprofit, agency, church, school, coalition | Organization |
-| `project` | Your internal programs and initiatives | Project |
-| `funder` | A specific funding opportunity or grant | Funding stream (not org — one org may have multiple) |
-| `idea` | Potential collaboration, program, or partnership not yet active | Idea |
+| `organization` | Business, nonprofit, agency, church, coalition, etc. | Organization |
+| `project` | Your internal programs, initiatives, and early-stage ideas | Project (including those at `idea` stage) |
+| `funder` | A funding source or relationship | Funder entity (not individual grants — those live in the note body) |
 | `interaction` | A dated record of a meeting, call, email, or event | Conversation or encounter |
 
-**Why these six and not fewer?** You could collapse Funder into Organization, or Idea into Project. But funders need their own pipeline tracking (status, deadline, amount), and ideas need a lightweight staging area before they graduate to projects. Keeping them separate makes Bases views and graph filtering cleaner.
+**Why five and not more?** These cover the full relational lifecycle: people cluster around orgs, orgs connect to funders, funders enable projects, projects attract more people. Each type earns its place by driving a distinct view or query.
 
-**Why not more?** The archive had these same six and they cover the full lifecycle: people cluster around orgs, orgs connect to funders, funders enable projects, projects attract more people. Adding types like "event" or "grant-report" creates filing overhead without improving navigability.
+**Why no Idea type?** The vault's purpose is contacts and relationships, not idea capture. A `Project` with `status: idea` stages early concepts without adding a separate entity type, template, or folder. When an idea matures, you just change its status — no migration needed. Actual brainstorming and ideation live wherever your team already does that work.
 
 ---
 
 ## 3. Frontmatter Schemas
 
-These are the fields that go in YAML frontmatter at the top of each note. The design goal: **every field should be something you'll fill in for 80%+ of new entries**. Optional context goes in the note body, not frontmatter.
+The design goal: **every field should be something you'll fill in for 80%+ of new entries**. Optional context goes in the note body, not frontmatter.
 
 ### 3.1 Person
 
@@ -51,7 +50,6 @@ orgs:
   - "[[Org Name]]"
 introduced-by: "[[Person Name]]"
 cadence: monthly
-next-touch: 2026-04-01
 owner: "[[August]]"
 tags:
   - person
@@ -60,20 +58,20 @@ tags:
 
 **Field notes:**
 
-- **role** — Single value, not a list. One of: `team`, `contact`, `funder-contact`, `elected-official`, `business-owner`, `faith-leader`, `educator`, `media`, `community-leader`. Default is `contact`. Pick the *primary* role; secondary roles go in the note body.
+- **role** — Single value. One of: `NVP-team`, `NVP-board-member`, `contact`, `faith`, `funder-contact`, `elected-official`, `business-owner`, `media`, `community-leader`. Default is `contact`. Pick the *primary* role; secondary roles go in the note body.
 - **orgs** — Wikilinks to Organization notes. Most people have 1-2.
 - **introduced-by** — How this person entered your network. Critical for pathway mapping. Leave blank if they're an original contact.
-- **cadence** — How often you *want* to be in touch. One of: `weekly`, `biweekly`, `monthly`, `quarterly`, `as-needed`. This is the "desired frequency" half of your tracking.
-- **next-touch** — The specific date by which you should reach out. Can be set manually ("touch base June 1st") or calculated from cadence. This is the actionable trigger.
+- **cadence** — How often you *want* to be in touch. One of: `weekly`, `biweekly`, `monthly`, `quarterly`, `as-needed`. Dataview computes whether you're on track by comparing this against your most recent interaction.
 - **owner** — Which team member owns the primary relationship. `[[August]]` or `[[Savannah]]`.
-- **tags** — Always includes `person`. Add `funder-adjacent` if they're connected to funding. Keep tags minimal; use frontmatter fields for everything queryable.
+- **tags** — Always includes `person`. Optionally add `funder-adjacent` if they're connected to funding.
 
-**What's NOT here (and why):**
+**What's NOT in frontmatter (and why):**
 
-- **~~warmth~~** — The archive had `hot/warm/cool/cold/new`. In practice, warmth is subjective, changes constantly, and people forget to update it. Your `cadence` field captures the same intent (high-cadence contacts are your warm ones) with less maintenance.
-- **~~knows~~** — Maintaining bidirectional `knows` lists is the biggest maintenance trap in the archive. Instead, relationships emerge automatically: if August and Priya both appear as `participants` in an interaction, the graph connects them. ExcaliBrain handles this.
-- **~~interests~~** — These are better as tags or note body content. Putting them in frontmatter creates inconsistency (is it `small-business` or `small business` or `entrepreneurship`?).
-- **~~last-contact~~** — Dataview can compute this from your most recent interaction. No need to manually track it.
+- **~~next-touch~~** — Specific dated reminders ("call Megan June 1st") belong in Google Calendar, which is purpose-built for deadline-oriented tasks. Obsidian handles the rhythm; Calendar handles the dates.
+- **~~last-contact~~** — Dataview computes this automatically from your most recent interaction note. No manual tracking needed — if you log interactions, this stays current.
+- **~~warmth~~** — Cadence captures the same intent with less subjectivity. A `weekly` contact is inherently your closest relationship. And unlike warmth, cadence is actionable — it tells you *what to do*, not just how you feel about someone.
+- **~~knows~~** — Bidirectional `knows` lists are the biggest maintenance trap. Instead, relationships emerge automatically: if two people appear as `participants` in the same interaction, the graph connects them.
+- **~~interests~~** — Free-text values in frontmatter create inconsistency that breaks queries. Capture interests in the note body instead.
 
 ### 3.2 Organization
 
@@ -94,8 +92,8 @@ tags:
 
 **Field notes:**
 
-- **category** — One of: `nonprofit`, `business`, `government`, `foundation`, `faith`, `education`, `media`, `association`.
-- **members** — Wikilinks to people you know at this org. This creates the ExcaliBrain parent-child relationship (person's `orgs` → parent, org's `members` → children).
+- **category** — One of: `nonprofit`, `business`, `government`, `foundation`, `faith`, `media`. These six categories map to how you'd actually filter and group orgs in a Bases view. Each represents a distinct relationship pattern: nonprofits are programming partners, businesses are sponsors and community stakeholders, government means political influence and public funding, foundations mean private funding, faith communities provide access and volunteers, media means visibility. If a new category genuinely emerges in your work, add it then.
+- **members** — Wikilinks to people you know at this org. Creates the ExcaliBrain parent-child link (person's `orgs` → parent, org's `members` → children).
 - **partners-with** — Other orgs this one has a relationship with. Creates Friend links in ExcaliBrain.
 - **relevance** — What this org means to you. List from: `funding`, `marketing`, `programming`, `political`, `volunteers`, `space`. Multiple values OK.
 
@@ -117,10 +115,10 @@ tags:
 
 **Field notes:**
 
-- **status** — One of: `idea`, `planning`, `active`, `paused`, `completed`.
+- **status** — One of: `idea`, `planning`, `active`, `paused`, `completed`. Use `idea` for early-stage concepts that haven't been committed to yet. When an idea matures, change status to `planning` — no migration needed.
 - **lead** — Which team member leads this project.
 - **partners** — Orgs or people involved. Wikilinks.
-- **funded-by** — Links to Funder notes (not org notes — a funder is a specific funding stream).
+- **funded-by** — Links to Funder notes. Wikilinks.
 
 ### 3.4 Funder
 
@@ -131,43 +129,25 @@ source-org: "[[Org Name]]"
 contact: "[[Person Name]]"
 connected-via: "[[Person Name]]"
 status: prospect
-amount: "10-50K"
-deadline: 2026-06-01
+focus-areas:
+  - community-development
+  - civic-engagement
 tags:
   - funder
 ---
 ```
 
-**Field notes:**
-
-- **source-org** — The organization that houses this funding opportunity.
-- **contact** — Your point person at the funder.
-- **connected-via** — Who in your network connected you to this opportunity. Critical for understanding funding pathways.
-- **status** — Pipeline stage. One of: `prospect`, `cultivating`, `applied`, `funded`, `declined`.
-- **amount** — Free text. Use whatever makes sense: "$5K", "10-50K", "$100K+", "in-kind".
-- **deadline** — Application or decision deadline. Leave blank if ongoing/rolling.
-
-### 3.5 Idea
-
-```yaml
----
-type: idea
-status: seed
-proposed-by: "[[Person Name]]"
-relevant-to:
-  - "[[Project or Org Name]]"
-tags:
-  - idea
----
-```
+A Funder note represents your **funding relationship** with a source — not a single grant or opportunity. One funder may have multiple grants, programs, or giving cycles. Specific opportunities, amounts, deadlines, and application details live in the note body (and deadline reminders go in Google Calendar).
 
 **Field notes:**
 
-- **status** — One of: `seed`, `exploring`, `proposed`, `shelved`. When an idea becomes real, promote it to a Project note and link back.
-- **proposed-by** — Who surfaced this idea.
-- **relevant-to** — What existing projects, orgs, or people it connects to.
+- **source-org** — The organization that houses this funder. Wikilink. Creates the ExcaliBrain parent link.
+- **contact** — Your point person at the funder. Wikilink. Creates ExcaliBrain child link.
+- **connected-via** — Who in your network connected you to this funder. Critical for understanding funding pathways. Creates ExcaliBrain "other friend" link.
+- **status** — Relationship stage. One of: `prospect` (we know they fund things like ours), `cultivating` (actively building the relationship), `active` (current funding relationship), `past` (previously funded us, relationship dormant).
+- **focus-areas** — What this funder cares about. Free-text list. Helps match funders to projects.
 
-### 3.6 Interaction
+### 3.5 Interaction
 
 ```yaml
 ---
@@ -176,24 +156,24 @@ date: 2026-03-19
 participants:
   - "[[August]]"
   - "[[Person Name]]"
-context: coffee-meeting
+context: call
 about:
   - "[[Project or Org Name]]"
-owner: "[[August]]"
+logged-by: "[[August]]"
 tags:
   - interaction
 ---
 ```
 
+**This is the most important note type.** It's the only one you create regularly. Making this fast to log is the whole game.
+
 **Field notes:**
 
-- **date** — When it happened. Also encoded in the filename.
-- **participants** — Everyone involved, including team members. This is the field that builds the relational web. When two people share an interaction, they become connected in the graph.
-- **context** — One of: `coffee`, `call`, `email`, `text`, `event`, `meeting`, `site-visit`.
-- **about** — What projects, orgs, ideas, or funders were discussed. Wikilinks.
-- **owner** — Which team member is responsible for any follow-up.
-
-**This is the most important note type.** It's the only one you create regularly (everything else is created once and updated occasionally). Making this fast to log is the whole game.
+- **date** — When it happened. Also encoded in the filename for sorting.
+- **participants** — Everyone involved, including team members. This is the field that builds the relational web — when two people share an interaction, they become connected in the graph.
+- **context** — One of: `call`, `email`, `text`, `event`, `meeting`. Keep it simple.
+- **about** — What projects, orgs, or funders were discussed. Wikilinks.
+- **logged-by** — Which team member recorded this interaction. Powers personal dashboard filters ("show me all interactions I've logged this month").
 
 ---
 
@@ -214,11 +194,10 @@ NVP_Relational_Map/
 ├── Organizations/
 ├── Projects/
 ├── Funders/
-├── Ideas/
 ├── Interactions/
 ├── Templates/
 ├── Meta/
-│   ├── Vault Design.md (this file — move here after review)
+│   ├── Vault Design.md (this file)
 │   ├── Conventions.md
 │   └── Plugin Setup.md
 └── _vault_experiment_archive/
@@ -227,12 +206,12 @@ NVP_Relational_Map/
 **Why this structure:**
 
 - **00-Dashboard/** sorts first. Two personal dashboards + a shared home.
-- **People/Team/** vs **People/Network/** separates your 2 internal files from the growing contact list. Bases and Dataview query across both seamlessly.
+- **People/Team/** vs **People/Network/** separates your internal files from the growing contact list. Bases and Dataview query across both seamlessly.
 - **Interactions/** is where most new files land. Named `YYYY-MM-DD Title` for chronological sorting.
 - **Templates/** holds Templater templates.
 - **Meta/** holds documentation for how to use the vault.
-- No **Maps/** folder for now (no manual Excalidraw maps). ExcaliBrain generates its visualizations on the fly.
-- No **Bases/** folder. Bases views in Obsidian are created via the UI, not as markdown files. The archive's Bases folder just held placeholder specs.
+- No **Ideas/** folder — early-stage concepts live in **Projects/** with `status: idea`.
+- No **Maps/** folder — ExcaliBrain generates visualizations on the fly, no manual map files needed.
 
 ---
 
@@ -252,8 +231,8 @@ NVP_Relational_Map/
 | Plugin | Why |
 |--------|-----|
 | **Homepage** | Auto-opens your personal dashboard when you launch Obsidian. Small quality-of-life improvement. |
-| **Calendar** | Shows interactions on a calendar view. Click a date, see what conversations happened. Useful for "when did I last talk to X?" |
-| **Various Complements** | Autocomplete for wikilinks and frontmatter values as you type. Speeds up data entry and reduces typos in link names. |
+| **Calendar** | Shows interactions on a calendar view. Click a date, see what conversations happened. |
+| **Various Complements** | Autocomplete for wikilinks and frontmatter values as you type. Speeds up data entry and reduces typos. |
 | **Tag Wrangler** | Right-click any tag to rename it across the entire vault. Insurance against taxonomy drift. |
 
 ### 5.3 ExcaliBrain Configuration
@@ -265,9 +244,9 @@ In ExcaliBrain settings → Ontology, map your frontmatter fields:
 | **Parent** | `orgs`, `source-org`, `funded-by` | "belongs to" — the entity above this one |
 | **Child** | `members`, `contact`, `participants` | "contains" — entities within this one |
 | **Friend** | `partners-with` | Peer/mutual relationships |
-| **Other Friend** | `introduced-by`, `connected-via`, `proposed-by` | Directional — how the connection was formed |
+| **Other Friend** | `introduced-by`, `connected-via` | Directional — how the connection was formed |
 
-What this gives you: navigate to "Riverside Community Foundation" and immediately see Marcus Bell (child/member), your grant (child/funded-by), United Way (friend/partner), and Diane Okafor (other friend/connected-via). All automatic from frontmatter.
+What this gives you: navigate to a foundation and immediately see its staff contacts (children), your funder note linked to it (child/funded-by), partner orgs (friends), and who connected you (other friend). All automatic from frontmatter.
 
 ### 5.4 Templater Configuration
 
@@ -278,23 +257,22 @@ What this gives you: navigate to "Riverside Community Foundation" and immediatel
   - `Organizations/` → Organization Template
   - `Projects/` → Project Template
   - `Funders/` → Funder Template
-  - `Ideas/` → Idea Template
   - `Interactions/` → Interaction Template
 
 ### 5.5 Native Features to Configure
 
-**Graph View** — Already enabled. Configure color groups:
+**Graph View** — Configure color groups:
 - `path:People` → Blue
 - `path:Organizations` → Green
 - `path:Funders` → Gold
 - `path:Projects` → Orange
-- `path:Ideas` → Purple
 - `path:Interactions` → Gray (or hide — they add noise at scale)
 
-**Bases** — Already enabled. Create views after templates are set up:
-- All People view (source: `People/`, columns: role, orgs, cadence, next-touch, owner)
-- Funding Pipeline (source: `Funders/`, columns: status, source-org, contact, amount, deadline)
+**Bases** — Create views after templates are set up:
+- All People view (source: `People/`, columns: role, orgs, cadence, owner)
+- Funding Pipeline (source: `Funders/`, columns: status, source-org, contact, focus-areas)
 - Interaction Log (source: `Interactions/`, columns: date, participants, context, about)
+- Project Tracker (source: `Projects/`, columns: status, lead, partners, funded-by)
 
 **Bookmarks** — Pin your dashboard and most-used Bases views.
 
@@ -302,68 +280,224 @@ What this gives you: navigate to "Riverside Community Foundation" and immediatel
 
 ## 6. Communication Cadence Tracking
 
-This is the system for "reach out to X every two weeks" and "touch base with Y on June 1st."
+The cadence system splits responsibilities between two tools: **Obsidian tracks rhythm**, **Google Calendar tracks specific dates**.
 
 ### How it works
 
-Each person note has two fields:
+Each person note has a `cadence` field: `weekly`, `biweekly`, `monthly`, `quarterly`, or `as-needed`.
 
-- **`cadence`** — The rhythm: `weekly`, `biweekly`, `monthly`, `quarterly`, `as-needed`
-- **`next-touch`** — The specific next date to reach out
+Dataview automatically computes when you last interacted with each person by scanning the Interactions folder for notes where they appear in `participants`. It then compares that date against their cadence to determine who's on track, who's coming due, and who's overdue.
 
-When you log an interaction with someone, you update their `next-touch` date. The Templater interaction template will remind you.
+Specific dated reminders — "follow up with Megan on June 1st," "send proposal by Friday" — go in Google Calendar. These are deadline-oriented tasks that benefit from push notifications, which Obsidian can't provide.
 
-### Dashboard query: Who needs attention?
+**The only thing you need to do:** log interactions. The rest is computed.
 
-```dataview
-TABLE role, orgs, cadence, next-touch, owner
-FROM "People/Network"
-WHERE next-touch <= date(today) + dur(3 days)
-SORT next-touch ASC
-```
+### Dashboard view: Upcoming Touchpoints
 
-This shows everyone whose `next-touch` is within 3 days (past or future). It's the "who should I call today?" list.
-
-### Dashboard query: Overdue contacts (dropped balls)
-
-```dataview
-TABLE role, orgs, cadence, next-touch, owner
-FROM "People/Network"
-WHERE next-touch < date(today) - dur(7 days)
-SORT next-touch ASC
-```
-
-Anyone more than a week past their `next-touch`. This is the "oops" list.
-
-### Dashboard query: Last interaction with each contact
+The next 20 contacts due for outreach, looking one month ahead:
 
 ```dataviewjs
-// For each person in Network, find their most recent interaction
-const people = dv.pages('"People/Network"').where(p => p.type === "person");
-const interactions = dv.pages('"Interactions"').where(i => i.type === "interaction");
+const people = dv.pages('"People/Network"')
+  .where(p => p.type === "person" && p.cadence && p.cadence !== "as-needed");
+const interactions = dv.pages('"Interactions"')
+  .where(i => i.type === "interaction");
+
+const cadenceDays = {
+  "weekly": 7, "biweekly": 14, "monthly": 30, "quarterly": 90
+};
 
 const rows = [];
 for (const person of people) {
-  const personInteractions = interactions
-    .where(i => i.participants && i.participants.some(p =>
-      dv.fileLink(person.file.name).path === dv.parse(p)?.path ||
+  const personInteractions = interactions.where(i =>
+    i.participants && i.participants.some(p =>
       String(p).includes(person.file.name)
-    ))
-    .sort(i => i.date, "desc");
+    )
+  ).sort(i => i.date, "desc");
 
-  const lastDate = personInteractions.length > 0 ? personInteractions[0].date : "No interactions";
-  const daysSince = personInteractions.length > 0
-    ? Math.floor((Date.now() - new Date(personInteractions[0].date)) / 86400000)
-    : "—";
+  const lastDate = personInteractions.length > 0
+    ? personInteractions[0].date
+    : null;
 
-  rows.push([person.file.link, person.owner, person.cadence, lastDate, daysSince + " days"]);
+  if (!lastDate) {
+    rows.push([person.file.link, person.role, person.cadence, "Never", "Overdue", person.owner]);
+    continue;
+  }
+
+  const last = new Date(lastDate.toString());
+  const days = cadenceDays[person.cadence] || 30;
+  const dueDate = new Date(last.getTime() + days * 86400000);
+  const today = new Date();
+  const daysUntilDue = Math.floor((dueDate - today) / 86400000);
+  const maxLookahead = 30;
+
+  if (daysUntilDue <= maxLookahead) {
+    const status = daysUntilDue < 0
+      ? "⚠️ " + Math.abs(daysUntilDue) + "d overdue"
+      : daysUntilDue === 0
+        ? "📍 Due today"
+        : "📅 Due in " + daysUntilDue + "d";
+    rows.push([person.file.link, person.role, person.cadence,
+      lastDate, status, person.owner]);
+  }
 }
 
-dv.table(["Person", "Owner", "Cadence", "Last Contact", "Days Since"],
-  rows.sort((a, b) => (b[4] === "— days" ? -1 : parseInt(b[4]) - parseInt(a[4]))));
+rows.sort((a, b) => {
+  const aNum = parseInt(String(a[4]).replace(/\D/g, '')) * (String(a[4]).includes("overdue") ? -1 : 1);
+  const bNum = parseInt(String(b[4]).replace(/\D/g, '')) * (String(b[4]).includes("overdue") ? -1 : 1);
+  return aNum - bNum;
+});
+
+dv.table(
+  ["Person", "Role", "Cadence", "Last Contact", "Status", "Owner"],
+  rows.slice(0, 20)
+);
 ```
 
-This computes `last-contact` automatically from your interaction log — no manual date tracking needed.
+This shows overdue contacts first (sorted by urgency), then upcoming touchpoints within the next month. Overdue contacts appear the day they're due, not a week later.
+
+### Dashboard view: Relational Suggestions
+
+"You recently talked to X. X is connected to Y. Maybe reach out to Y?"
+
+```dataviewjs
+const interactions = dv.pages('"Interactions"')
+  .where(i => i.type === "interaction")
+  .sort(i => i.date, "desc");
+
+const recentDays = 14;
+const today = new Date();
+const recentInteractions = interactions.where(i => {
+  const d = new Date(i.date.toString());
+  return (today - d) / 86400000 <= recentDays;
+});
+
+// Collect people you've recently interacted with
+const recentPeople = new Set();
+for (const i of recentInteractions) {
+  if (i.participants) {
+    for (const p of i.participants) {
+      const name = String(p).replace(/\[\[|\]\]/g, '');
+      recentPeople.add(name);
+    }
+  }
+}
+
+// For each recent person, find their orgs and other org members
+const allPeople = dv.pages('"People/Network"').where(p => p.type === "person");
+const suggestions = [];
+
+for (const recentName of recentPeople) {
+  const recentPerson = allPeople.find(p => p.file.name === recentName);
+  if (!recentPerson || !recentPerson.orgs) continue;
+
+  for (const org of [recentPerson.orgs].flat()) {
+    const orgName = String(org).replace(/\[\[|\]\]/g, '');
+    // Find other people at the same org who you haven't contacted recently
+    const colleagues = allPeople.where(p =>
+      p.file.name !== recentName &&
+      !recentPeople.has(p.file.name) &&
+      p.orgs && [p.orgs].flat().some(o => String(o).includes(orgName))
+    );
+
+    for (const colleague of colleagues) {
+      // Check if colleague is overdue or coming due
+      const collInteractions = interactions.where(i =>
+        i.participants && i.participants.some(p =>
+          String(p).includes(colleague.file.name)
+        )
+      );
+      const lastContact = collInteractions.length > 0
+        ? collInteractions[0].date : null;
+      const daysSince = lastContact
+        ? Math.floor((today - new Date(lastContact.toString())) / 86400000)
+        : 999;
+
+      if (daysSince > 14) {
+        suggestions.push([
+          colleague.file.link,
+          "You spoke with " + recentName + " (" + orgName + ")",
+          lastContact ? daysSince + " days ago" : "Never contacted",
+          colleague.owner
+        ]);
+      }
+    }
+  }
+}
+
+// Deduplicate by person name
+const seen = new Set();
+const unique = suggestions.filter(s => {
+  const key = String(s[0]);
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+});
+
+if (unique.length > 0) {
+  dv.table(["Suggested Contact", "Connection", "Last Contact", "Owner"],
+    unique.slice(0, 10));
+} else {
+  dv.paragraph("*No relational suggestions right now — your network is well-tended.*");
+}
+```
+
+This query finds people who share an organization with someone you've recently interacted with, and who you *haven't* contacted recently. It surfaces the "you talked to Nate at Org X, Megan is also at Org X and you haven't spoken in 45 days" connections.
+
+### Dashboard view: Overdue Contacts
+
+Anyone past their cadence due date, starting from day one:
+
+```dataviewjs
+const people = dv.pages('"People/Network"')
+  .where(p => p.type === "person" && p.cadence && p.cadence !== "as-needed");
+const interactions = dv.pages('"Interactions"')
+  .where(i => i.type === "interaction");
+
+const cadenceDays = {
+  "weekly": 7, "biweekly": 14, "monthly": 30, "quarterly": 90
+};
+
+const rows = [];
+for (const person of people) {
+  const personInteractions = interactions.where(i =>
+    i.participants && i.participants.some(p =>
+      String(p).includes(person.file.name)
+    )
+  ).sort(i => i.date, "desc");
+
+  const lastDate = personInteractions.length > 0
+    ? personInteractions[0].date : null;
+  const days = cadenceDays[person.cadence] || 30;
+
+  if (!lastDate) {
+    rows.push([person.file.link, person.cadence, "Never", "—", person.owner]);
+    continue;
+  }
+
+  const last = new Date(lastDate.toString());
+  const dueDate = new Date(last.getTime() + days * 86400000);
+  const today = new Date();
+  const daysOverdue = Math.floor((today - dueDate) / 86400000);
+
+  if (daysOverdue >= 0) {
+    rows.push([person.file.link, person.cadence, lastDate,
+      daysOverdue === 0 ? "Due today" : daysOverdue + " days overdue",
+      person.owner]);
+  }
+}
+
+rows.sort((a, b) => {
+  const aVal = String(a[3]).includes("Never") ? 999 : parseInt(String(a[3])) || 0;
+  const bVal = String(b[3]).includes("Never") ? 999 : parseInt(String(b[3])) || 0;
+  return bVal - aVal;
+});
+
+if (rows.length > 0) {
+  dv.table(["Person", "Cadence", "Last Contact", "Status", "Owner"], rows);
+} else {
+  dv.paragraph("*All contacts are within their cadence window.*");
+}
+```
 
 ---
 
@@ -374,10 +508,10 @@ Beyond cadence tracking, these queries power the dashboards:
 ### Funding pipeline overview
 
 ```dataview
-TABLE source-org, contact, connected-via, status, amount, deadline
+TABLE source-org, contact, connected-via, status, focus-areas
 FROM "Funders"
 WHERE type = "funder"
-SORT deadline ASC
+SORT status ASC
 ```
 
 ### Recent interactions (last 30 days)
@@ -399,20 +533,24 @@ FROM "People/Network"
 WHERE contains(orgs, [[Target Org]])
 ```
 
-### Active and planning projects
+### All projects by status
 
 ```dataview
 TABLE status, lead, partners, funded-by
 FROM "Projects"
-WHERE status = "active" OR status = "planning"
+SORT choice(status = "active", 1, choice(status = "planning", 2, choice(status = "idea", 3, 4))) ASC
 ```
 
-### Ideas pipeline
+### My interactions this month
+
+Replace `August` with your name:
 
 ```dataview
-TABLE status, proposed-by, relevant-to
-FROM "Ideas"
-SORT status ASC
+TABLE date, participants, context, about
+FROM "Interactions"
+WHERE contains(logged-by, [[August]])
+  AND date >= date(today) - dur(30 days)
+SORT date DESC
 ```
 
 ---
@@ -422,58 +560,143 @@ SORT status ASC
 ### Adding a new contact
 
 1. Create a new note in `People/Network/`. Name it their full name.
-2. Templater auto-fills the Person template with today's date and prompts for owner.
-3. Fill in: `role`, `orgs` (link to existing org or create new), `introduced-by`, `cadence`, `next-touch`.
-4. In the note body, write a sentence or two of context: how you met, why they matter, anything to remember.
+2. Templater auto-fills the Person template and prompts for owner.
+3. Fill in frontmatter: `role`, `orgs`, `introduced-by`, `cadence`.
+4. Fill in the body sections (see template below for prompts).
 5. If they belong to an org that already has a note, add them to that org's `members` list.
+
+**Person template body sections:**
+
+```markdown
+## Context
+Who they are and how we connected:
+
+## Key Contacts
+Who they know that matters to us:
+
+## Relationship Notes
+Nature of relationship, what they care about, how we can help each other:
+```
+
+### Adding a new organization
+
+1. Create a new note in `Organizations/`. Name it the org's official name.
+2. Fill in frontmatter: `category`, `members`, `partners-with`, `relevance`.
+3. Fill in body sections.
+
+**Organization template body sections:**
+
+```markdown
+## About
+What this org does and why it matters to our work:
+
+## Key People
+Our contacts there and their roles:
+
+## Collaboration History
+Past and current ways we've worked together:
+```
+
+### Adding a new project
+
+1. Create a new note in `Projects/`. Name it descriptively.
+2. Fill in frontmatter: `status` (start with `idea` if early-stage), `lead`, `partners`, `funded-by`.
+3. Fill in body sections.
+
+**Project template body sections:**
+
+```markdown
+## Description
+What this project is and what it aims to accomplish:
+
+## Partners & Stakeholders
+Who's involved and what they contribute:
+
+## Status & Next Steps
+Current state and upcoming milestones:
+```
+
+### Adding a new funder
+
+1. Create a new note in `Funders/`. Name it after the funding source.
+2. Fill in frontmatter: `source-org`, `contact`, `connected-via`, `status`, `focus-areas`.
+3. Fill in body sections.
+
+**Funder template body sections:**
+
+```markdown
+## About
+Who they are and what they fund:
+
+## Opportunities
+Specific grants, programs, or giving cycles (include amounts and deadlines here):
+
+## Relationship History
+How our relationship has developed, key conversations:
+```
 
 ### Logging an interaction
 
 1. Create a new note in `Interactions/`. Name it `YYYY-MM-DD Brief Title`.
-2. Templater auto-fills date, prompts for owner and context type.
-3. Fill in `participants` (link everyone involved) and `about` (link relevant projects/orgs/ideas).
-4. Write a brief summary in the note body. List action items with checkboxes.
-5. Update `next-touch` on each participant's person note.
+2. Templater auto-fills date, prompts for context type and logged-by.
+3. Fill in `participants` (link everyone involved) and `about` (link relevant projects/orgs/funders).
+4. Fill in body sections.
 
-This is the critical habit. If you do nothing else, log interactions.
+**Interaction template body sections:**
+
+```markdown
+## Summary
+What happened:
+
+## Key Takeaways
+What we learned or what shifted:
+
+## Action Items
+- [ ]
+```
+
+This is the critical daily habit. If you do nothing else, log interactions.
 
 ### Before a meeting
 
-1. Search for the person's note. Read their context and any linked interactions.
+1. Search for the person's note. Read their context and relationship notes.
 2. Open ExcaliBrain on their note — see their organizational connections, who introduced them, what projects they're linked to.
 3. Check the funding pipeline if they're funder-adjacent.
 
 ### Weekly review
 
 1. Open your personal dashboard.
-2. Scan the "needs attention" query — who's overdue?
-3. Check outstanding action items from recent interactions.
-4. Review the funding pipeline for approaching deadlines.
-5. Quick sync with your co-user: any new connections, introductions, or status changes?
+2. Scan the Overdue Contacts query — who needs attention today?
+3. Review the Upcoming Touchpoints list — who's coming due this week?
+4. Glance at Relational Suggestions — any warm introductions to make?
+5. Check outstanding action items from recent interactions.
+6. Review the funding pipeline for approaching deadlines.
+7. Quick sync with your co-user: any new connections, introductions, or status changes?
 
 ---
 
 ## 9. What This Looks Like in the Graph
 
-**Native Graph View** (filtered by color groups): You see a constellation where blue People nodes cluster around green Organization nodes. Gold Funder nodes connect through specific people to your orange Project nodes. Dense clusters reveal your strongest community ties; isolated nodes reveal relationships that need development.
+**Native Graph View** (filtered by color groups): A constellation where blue People nodes cluster around green Organization nodes. Gold Funder nodes connect through specific people to your orange Project nodes. Dense clusters reveal your strongest community ties; isolated nodes reveal relationships that need development.
 
-**ExcaliBrain** (navigating from a specific entity): Click on a funder and see the org it comes from (parent), your contact person (child), and who connected you (other friend). Click on that contact person and see their other org affiliations (parents), who they know that you also know (friends), and every interaction you've had with them (children via participants field). This is how you trace the "funding triangle" and "marketing amplification loop" patterns the archive identified — but automatically, without hand-drawing anything.
+**ExcaliBrain** (navigating from a specific entity): Click on a funder and see the org it comes from (parent), your contact person (child), and who connected you (other friend). Click on that contact person and see their other org affiliations (parents) and who they share interactions with. This is how you trace funding triangles and amplification loops — automatically, without hand-drawing anything.
 
 ---
 
 ## 10. Design Decisions Log
 
-Decisions made during design, with rationale:
-
 | Decision | Rationale |
 |----------|-----------|
-| Dropped `warmth` field | Cadence captures the same intent with less subjectivity. A `weekly` contact is inherently "hot." |
-| Dropped `knows` field | Relationships emerge from shared interactions. Manual bidirectional maintenance doesn't scale. |
-| Dropped `interests` from frontmatter | Inconsistent free-text values break queries. Use tags or note body instead. |
-| Dropped `last-contact` from frontmatter | Dataview computes it from interactions. One less field to manually update. |
+| Removed `Idea` entity type | Vault's purpose is contacts and relationships. `Project` with `status: idea` covers early-stage concepts without adding a type, template, and folder. |
+| Removed `next-touch` field | Specific dated reminders belong in Google Calendar (push notifications, deadline tracking). Obsidian tracks rhythm via cadence + computed last-contact. |
+| Removed `warmth` field | Cadence captures the same intent with less subjectivity. A `weekly` contact is inherently close. |
+| Removed `knows` field | Relationships emerge from shared interactions. Manual bidirectional maintenance doesn't scale. |
+| Removed `interests` from frontmatter | Inconsistent free-text values break queries. Capture in note body instead. |
+| Removed `last-contact` from frontmatter | Dataview computes it from interactions. One less field to maintain. |
+| Reframed Funder as relationship, not grant | A funder is an entity with many possible opportunities. Amounts, deadlines, and grant details live in the note body + Google Calendar. |
+| Removed `education` and `association` org categories | Don't create useful filter boundaries for this org's work. A university is effectively a nonprofit partner; a coalition is the same. Six categories (nonprofit, business, government, foundation, faith, media) cover the meaningful distinctions. |
+| Renamed `owner` to `logged-by` on interactions | Clearer meaning — who recorded this. Powers "my interactions" dashboard filter. |
 | Dropped hand-drawn Excalidraw maps | Manual maintenance overhead for a 2-person team. ExcaliBrain + Graph View covers visualization. Can add later. |
 | Dropped Relay plugin | Already syncing via git. Two sync layers create conflict risk. |
-| Kept Funder as separate entity type | One org may have multiple funding streams with different deadlines and statuses. |
-| Kept Idea as separate entity type | Lightweight staging before something becomes a Project with real tracking needs. |
-| 6-8 frontmatter fields per entity | Community consensus: field creep is the #1 CRM abandonment cause. |
-| Interactions as the engine | Every logged interaction enriches the graph, updates cadence math, and builds institutional memory. Low-friction interaction logging is the design priority. |
+| 5-7 frontmatter fields per entity | Community consensus: field creep is the #1 CRM abandonment cause. |
+| Interactions as the engine | Every logged interaction enriches the graph, updates cadence math, and builds institutional memory. |
