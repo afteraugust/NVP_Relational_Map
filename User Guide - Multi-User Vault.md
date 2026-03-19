@@ -6,12 +6,16 @@ This vault is shared between two users via Git. The **obsidian-git** plugin hand
 
 ## How Sync Works
 
-Your changes are automatically committed and pushed within 1 minute of your last edit. The other user's changes are pulled every 5 minutes and on startup. You'll see a brief status message in the bottom-right when a sync occurs.
+**The primary sync method is manual.** When you're done editing, hit Cmd+P → "Git: Commit-and-sync" before switching away from Obsidian. This takes 2 seconds and guarantees your changes are pushed.
+
+As a safety net, the plugin also auto-syncs ~1 minute after your last edit — but only while Obsidian stays open and in the foreground. Don't rely on this; treat the manual sync as the default habit.
+
+The other user's changes are pulled every 5 minutes and on startup.
 
 ## Rules
 
-1. **Don't edit the same file at the same time.** The vault can handle it, but it creates merge conflicts that require manual cleanup. A quick message ("I'm editing X") is enough to avoid this.
-2. **Let sync finish before closing Obsidian.** Changes push within ~1 minute of your last edit, but if you close immediately you may beat the timer. You can trigger it manually: Cmd+P → "Obsidian Git: Commit all changes".
+1. **Sync before you switch away.** Cmd+P → "Git: Commit-and-sync" after you're done editing. This is the single most important habit.
+2. **Don't edit the same file at the same time.** The vault can handle it, but it creates merge conflicts that require manual cleanup. A quick message ("I'm editing X") is enough to avoid this.
 3. **Don't delete `.gitignore` or `.gitattributes`.** These files live in the vault root and control what gets synced. They're invisible in Obsidian's file explorer but exist on disk.
 
 ## If Something Goes Wrong
@@ -56,9 +60,10 @@ All available from the command palette (Cmd+P):
 
 | Command | What it does |
 |---|---|
-| Obsidian Git: Commit all changes | Saves your current changes to git |
-| Obsidian Git: Push | Sends your commits to the remote |
-| Obsidian Git: Pull | Fetches the other user's changes |
+| Git: Commit-and-sync | Commits, pulls, and pushes in one step — **use this one** |
+| Git: Commit all changes | Commits locally only (does not push) |
+| Git: Push | Sends your commits to the remote |
+| Git: Pull | Fetches the other user's changes |
 | Obsidian Git: Open file history | Shows version history for the current note |
 
 ## What Not to Worry About
@@ -122,4 +127,4 @@ Go to Settings → Community Plugins → the obsidian-git plugin should already 
 | Merge strategy on conflicts | None (git default) |
 
 **6. Test it.**
-Create a test note, then Cmd+P → "Obsidian Git: Commit all changes". Let August know and he'll confirm it showed up on his end.
+Create a test note, then Cmd+P → "Git: Commit-and-sync". Let August know and he'll confirm it showed up on his end.
