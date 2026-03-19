@@ -65,13 +65,6 @@ tags:
 - **owner** — Which team member owns the primary relationship. `[[August]]` or `[[Savannah]]`.
 - **tags** — Always includes `person`. Optionally add `funder-adjacent` if they're connected to funding.
 
-**What's NOT in frontmatter (and why):**
-
-- **~~next-touch~~** — Specific dated reminders ("call Megan June 1st") belong in Google Calendar, which is purpose-built for deadline-oriented tasks. Obsidian handles the rhythm; Calendar handles the dates.
-- **~~last-contact~~** — Dataview computes this automatically from your most recent interaction note. No manual tracking needed — if you log interactions, this stays current.
-- **~~warmth~~** — Cadence captures the same intent with less subjectivity. A `weekly` contact is inherently your closest relationship. And unlike warmth, cadence is actionable — it tells you *what to do*, not just how you feel about someone.
-- **~~knows~~** — Bidirectional `knows` lists are the biggest maintenance trap. Instead, relationships emerge automatically: if two people appear as `participants` in the same interaction, the graph connects them.
-- **~~interests~~** — Free-text values in frontmatter create inconsistency that breaks queries. Capture interests in the note body instead.
 
 ### 3.2 Organization
 
@@ -92,7 +85,7 @@ tags:
 
 **Field notes:**
 
-- **category** — One of: `nonprofit`, `business`, `government`, `foundation`, `faith`, `media`. These six categories map to how you'd actually filter and group orgs in a Bases view. Each represents a distinct relationship pattern: nonprofits are programming partners, businesses are sponsors and community stakeholders, government means political influence and public funding, foundations mean private funding, faith communities provide access and volunteers, media means visibility. If a new category genuinely emerges in your work, add it then.
+- **category** — One of: `nonprofit`, `business`, `government`, `foundation`, `faith`, `media`, `association`, `education`. These eight categories map to how you'd actually filter and group orgs in a Bases view. Each represents a distinct relationship pattern: nonprofits are programming partners, businesses are sponsors and community stakeholders, government means political influence and public funding, foundations mean private funding, faith communities provide access and volunteers, media means visibility. If a new category genuinely emerges in your work, add it then.
 - **members** — Wikilinks to people you know at this org. Creates the ExcaliBrain parent-child link (person's `orgs` → parent, org's `members` → children).
 - **partners-with** — Other orgs this one has a relationship with. Creates Friend links in ExcaliBrain.
 - **relevance** — What this org means to you. List from: `funding`, `marketing`, `programming`, `political`, `volunteers`, `space`. Multiple values OK.

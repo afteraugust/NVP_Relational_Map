@@ -1,0 +1,101 @@
+---
+tags:
+  - meta
+---
+
+# Plugin Setup Guide
+
+## Essential Plugins (Install First)
+
+### 1. Dataview
+- **Install:** Settings → Community Plugins → Browse → search "Dataview" → Install → Enable
+- **Settings:** Enable JavaScript queries (Settings → Dataview → Enable JavaScript Queries)
+- **Why:** Powers all dashboard queries and cadence tracking. Also required by ExcaliBrain.
+
+### 2. Templater
+- **Install:** Settings → Community Plugins → Browse → search "Templater" → Install → Enable
+- **Settings:**
+  - Template folder location: `Templates`
+  - Trigger Templater on new file creation: **ON**
+  - Folder Templates (Settings → Templater → Folder Templates):
+    - `People/` → `Templates/Person Template`
+    - `Organizations/` → `Templates/Organization Template`
+    - `Projects/` → `Templates/Project Template`
+    - `Funders/` → `Templates/Funder Template`
+    - `Interactions/` → `Templates/Interaction Template`
+- **Why:** Auto-fills templates when you create new notes in the right folders. Prompts you for key fields.
+
+### 3. Excalidraw
+- **Install:** Settings → Community Plugins → Browse → search "Excalidraw" → Install → Enable
+- **Settings:** Defaults are fine
+- **Why:** Required as the rendering engine for ExcaliBrain. You won't use it directly unless you later want hand-drawn strategic maps.
+
+### 4. ExcaliBrain
+- **Install:** Settings → Community Plugins → Browse → search "ExcaliBrain" → Install → Enable
+- **Settings → Ontology:**
+  - **Parent fields:** `orgs`, `source-org`, `funded-by`
+  - **Child fields:** `members`, `contact`, `participants`
+  - **Friend fields:** `partners-with`
+  - **Other Friend fields:** `introduced-by`, `connected-via`
+- **Why:** Auto-generated semantic relationship graph. Click any entity, see all connections by type.
+- **How to use:** Cmd+P → "ExcaliBrain" → opens the graph centered on your current note. Click nodes to navigate. This is your primary tool for seeing the relational web.
+
+## Recommended Plugins
+
+### Homepage
+- **Install:** Community Plugins → "Homepage"
+- **Settings:** Set homepage to `00-Dashboard/Home` (or your personal dashboard)
+- **Why:** Opens your dashboard automatically when you launch Obsidian.
+
+### Calendar
+- **Install:** Community Plugins → "Calendar"
+- **Settings:** Defaults are fine
+- **Why:** Sidebar calendar view. Shows dots on days with Interaction notes. Click a date to see what happened that day.
+
+### Various Complements
+- **Install:** Community Plugins → "Various Complements"
+- **Settings:** Enable "Internal link complement" and "Front matter complement"
+- **Why:** Autocomplete for wikilinks and frontmatter values as you type. Reduces typos and speeds up data entry.
+
+### Tag Wrangler
+- **Install:** Community Plugins → "Tag Wrangler"
+- **Settings:** Defaults are fine
+- **Why:** Right-click any tag in the tag pane to rename it across the entire vault. Safety net for when naming conventions drift.
+
+## Native Feature Configuration
+
+### Graph View
+Open Graph View (sidebar or Cmd+P → "Graph View"), then click the settings gear:
+
+**Color Groups** (add these):
+- Group 1: `path:People` → Blue
+- Group 2: `path:Organizations` → Green
+- Group 3: `path:Funders` → Gold/Yellow
+- Group 4: `path:Projects` → Orange
+- Group 5: `path:Interactions` → Gray
+
+**Display:**
+- Consider hiding Interactions in the global graph (they add visual noise). You can always filter them back in.
+- Orphan nodes: Show (helps you spot contacts you haven't linked to anything yet)
+
+### Bases
+Bases is a core plugin (already enabled). To create views:
+1. Cmd+P → "Bases: Create new base"
+2. Set source folder and filter by `type` property
+3. Add columns from frontmatter fields
+4. Save to your preferred location
+
+**Suggested views:**
+- **All People:** Source `People/`, columns: role, orgs, cadence, owner
+- **Funding Pipeline:** Source `Funders/`, columns: status, source-org, contact, focus-areas
+- **Interaction Log:** Source `Interactions/`, columns: date, participants, context, about
+- **Project Tracker:** Source `Projects/`, columns: status, lead, partners, funded-by
+
+## Plugin Installation Order
+
+If setting up from scratch, install in this order:
+1. Dataview (other plugins depend on it)
+2. Templater (so you can start creating notes properly)
+3. Excalidraw (ExcaliBrain depends on it)
+4. ExcaliBrain (configure ontology after install)
+5. Homepage, Calendar, Various Complements, Tag Wrangler (in any order)

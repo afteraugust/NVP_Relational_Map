@@ -6,7 +6,13 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    { "query": "path:People", "color": { "a": 1, "rgb": 4886754 } },
+    { "query": "path:Organizations", "color": { "a": 1, "rgb": 3248912 } },
+    { "query": "path:Funders", "color": { "a": 1, "rgb": 16761095 } },
+    { "query": "path:Projects", "color": { "a": 1, "rgb": 16742912 } },
+    { "query": "path:Interactions", "color": { "a": 1, "rgb": 8421504 } }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
