@@ -1,0 +1,15 @@
+# Per-device workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Per-user preferences (remove these lines if you want shared hotkeys/theme)
+.obsidian/hotkeys.json
+.obsidian/appearance.json
+
+# Obsidian trash
+.trash/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
