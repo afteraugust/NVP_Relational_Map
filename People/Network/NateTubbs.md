@@ -5,7 +5,7 @@ orgs:
   - "[[]]"
   - "[[TogetherChicago]]"
 introduced-by: "[[]]"
-cadence:
+cadence: monthly
 owner:
 tags:
   - person
