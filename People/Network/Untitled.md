@@ -4,8 +4,8 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: weekly
-owner: "[[null]]"
+cadence: quarterly
+owner: "[[August]]"
 tags:
   - person
 ---

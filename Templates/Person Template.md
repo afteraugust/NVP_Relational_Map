@@ -1,11 +1,11 @@
 ---
 type: person
-role: <% tp.system.suggester(["contact", "NVP-team", "NVP-board-member", "faith", "funder-contact", "elected-official", "business-owner", "media", "community-leader"], ["contact", "NVP-team", "NVP-board-member", "faith", "funder-contact", "elected-official", "business-owner", "media", "community-leader"]) %>
+role: <% tp.system.suggester(["contact", "NVP-team", "NVP-board-member", "faith", "funder-contact", "elected-official", "business-owner", "media", "community-leader"], ["contact", "NVP-team", "NVP-board-member", "faith", "funder-contact", "elected-official", "business-owner", "media", "community-leader"], false, "Select role") %>
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: <% tp.system.suggester(["monthly", "weekly", "biweekly", "quarterly", "as-needed"], ["monthly", "weekly", "biweekly", "quarterly", "as-needed"]) %>
-owner: "[[<% tp.system.suggester(["August", "Savannah"], ["August", "Savannah"]) %>]]"
+cadence: <% tp.system.suggester(["monthly", "weekly", "biweekly", "quarterly", "as-needed"], ["monthly", "weekly", "biweekly", "quarterly", "as-needed"], false, "Select contact cadence") %>
+owner: "[[<% tp.system.suggester(["August", "Savannah"], ["August", "Savannah"], false, "Select relationship owner") %>]]"
 tags:
   - person
 ---

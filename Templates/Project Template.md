@@ -1,7 +1,7 @@
 ---
 type: project
-status: <% tp.system.suggester(["idea", "planning", "active", "paused", "completed"], ["idea", "planning", "active", "paused", "completed"]) %>
-lead: "[[<% tp.system.suggester(["August", "Savannah"], ["August", "Savannah"]) %>]]"
+status: <% tp.system.suggester(["idea", "planning", "active", "paused", "completed"], ["idea", "planning", "active", "paused", "completed"], false, "Select project status") %>
+lead: "[[<% tp.system.suggester(["August", "Savannah"], ["August", "Savannah"], false, "Select project lead") %>]]"
 partners:
   - "[[]]"
 funded-by:

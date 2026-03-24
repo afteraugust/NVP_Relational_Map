@@ -1,6 +1,6 @@
 ---
 type: organization
-category: <% tp.system.suggester(["nonprofit", "business", "government", "foundation", "faith", "media", "association", "education"], ["nonprofit", "business", "government", "foundation", "faith", "media", "association", "education"]) %>
+category: <% tp.system.suggester(["nonprofit", "business", "government", "foundation", "faith", "media", "association", "education"], ["nonprofit", "business", "government", "foundation", "faith", "media", "association", "education"], false, "Select organization category") %>
 members:
   - "[[]]"
 partners-with:
