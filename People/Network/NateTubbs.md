@@ -3,7 +3,7 @@ type: person
 role:
 orgs:
   - "[[]]"
-  - TogetherChicago
+  - "[[TogetherChicago]]"
 introduced-by: "[[]]"
 cadence:
 owner: "[[null]]"

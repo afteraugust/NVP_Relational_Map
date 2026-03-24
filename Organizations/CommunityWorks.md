@@ -5,7 +5,7 @@ members:
   - "[[]]"
 partners-with:
   - "[[]]"
-  - AllianceForFlourishingNeighborhoods
+  - "[[AllianceForFlourishingNeighborhoods]]"
 relevance:
   - 
 tags:

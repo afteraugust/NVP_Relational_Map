@@ -3,10 +3,10 @@ type: organization
 category:
 members:
   - "[[]]"
-  - NateTubbs
+  - "[[NateTubbs]]"
 partners-with:
   - "[[]]"
-  - AllianceForFlourishingNeighborhoods
+  - "[[AllianceForFlourishingNeighborhoods]]"
 relevance:
   - 
 tags:

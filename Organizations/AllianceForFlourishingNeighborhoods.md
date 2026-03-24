@@ -3,15 +3,16 @@ type: organization
 category:
 members:
   - "[[]]"
-  - AugustElliott
-  - MacKenzieSchuller
-  - NateTubbs
-  - SavannahKruger
-  - MeganGinn
+  - "[[AugustElliott]]"
+  - "[[MacKenzieSchuller]]"
+  - "[[MeganGinn]]"
+  - "[[NateTubbs]]"
+  - "[[SavannahKruger]]"
 partners-with:
   - "[[]]"
-  - TogetherChicago
-  - CommunityWorks
+  - "[[NVP]]"
+  - "[[TogetherChicago]]"
+  - "[[CommunityWorks]]"
 relevance:
   - 
 tags:

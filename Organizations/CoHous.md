@@ -3,7 +3,7 @@ type: organization
 category:
 members:
   - "[[]]"
-  - TrishBecker
+  - "[[TrishBecker]]"
 partners-with:
   - "[[]]"
 relevance:

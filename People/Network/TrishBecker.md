@@ -3,7 +3,7 @@ type: person
 role:
 orgs:
   - "[[]]"
-  - CoHous
+  - "[[CoHous]]"
 introduced-by: "[[]]"
 cadence:
 owner: "[[null]]"
