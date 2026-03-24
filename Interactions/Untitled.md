@@ -15,7 +15,7 @@ tags:
 ## Summary
 What happened:
 
-
+Had a walk, got deeper, chatted about moving good neighbor week forward
 ## Key Takeaways
 What we learned or what shifted:
 
