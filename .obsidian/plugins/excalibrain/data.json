@@ -43,9 +43,7 @@
       "connected-via",
       "introduced-by"
     ],
-    "next": [
-      ""
-    ],
+    "next": [],
     "hidden": [
       "hidden"
     ]
@@ -165,7 +163,10 @@
     "introduced-by": {},
     "": {}
   },
-  "navigationHistory": [],
+  "navigationHistory": [
+    "People/Team/August.md",
+    "_vault_experiment_archive/Projects/Small Business Partnership Program.md"
+  ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",
   "ontologySuggesterChildTrigger": "::c",

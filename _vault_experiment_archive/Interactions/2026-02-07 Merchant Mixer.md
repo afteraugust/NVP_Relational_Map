@@ -2,14 +2,14 @@
 type: interaction
 date: 2026-02-07
 participants:
-  - "[[August]]"
+  - "[[AugustElliott]]"
   - "[[Priya Sharma]]"
   - "[[Carlos Mendez]]"
 context: event
 about:
   - "[[Main Street Alliance Event Sponsors]]"
   - "[[Small Business Partnership Program]]"
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 followup: true
 tags:
   - interaction

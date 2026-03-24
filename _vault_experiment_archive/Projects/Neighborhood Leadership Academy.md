@@ -1,7 +1,7 @@
 ---
 type: project
 status: planning
-lead: "[[August]]"
+lead: "[[AugustElliott]]"
 partners:
   - "[[Riverside YMCA]]"
   - "[[Grace Community Church]]"

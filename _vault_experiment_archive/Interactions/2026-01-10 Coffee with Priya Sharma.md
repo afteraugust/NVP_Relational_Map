@@ -2,12 +2,12 @@
 type: interaction
 date: 2026-01-10
 participants:
-  - "[[August]]"
+  - "[[AugustElliott]]"
   - "[[Priya Sharma]]"
 context: coffee-meeting
 about:
   - "[[Small Business Partnership Program]]"
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 followup: false
 tags:
   - interaction

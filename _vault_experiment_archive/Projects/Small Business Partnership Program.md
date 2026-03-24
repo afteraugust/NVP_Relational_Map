@@ -1,7 +1,7 @@
 ---
 type: project
 status: idea
-lead: "[[August]]"
+lead: "[[AugustElliott]]"
 partners:
   - "[[Main Street Alliance]]"
 funded-by: []

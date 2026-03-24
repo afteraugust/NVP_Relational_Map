@@ -7,9 +7,9 @@ orgs:
 introduced-by:
 knows:
   - "[[Tom Nguyen]]"
-  - "[[August]]"
+  - "[[AugustElliott]]"
 warmth: warm
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 last-contact: 2026-02-14
 next-followup: 2026-03-01
 interests:
@@ -33,4 +33,4 @@ Professor of Urban Studies at State University. Reached out to us after reading 
 
 ## Key Relationships
 - [[Tom Nguyen]] — his article brought her to us, they've since connected directly
-- [[August]] — primary contact, managing the partnership exploration
+- [[AugustElliott]] — primary contact, managing the partnership exploration

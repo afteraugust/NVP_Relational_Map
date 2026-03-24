@@ -25,7 +25,7 @@ Formalize a service-learning partnership with State University's Urban Studies d
 
 ## Who's Involved
 - [[Prof. Sarah Lin]] — proposing from the university side, checking with department chair
-- [[August]] — managing the partnership exploration
+- [[AugustElliott]] — managing the partnership exploration
 - Potentially: department chair (unknown contact, Sarah is our bridge)
 
 ## Next Steps

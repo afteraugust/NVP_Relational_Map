@@ -2,12 +2,12 @@
 type: interaction
 date: 2026-02-14
 participants:
-  - "[[August]]"
+  - "[[AugustElliott]]"
   - "[[Prof. Sarah Lin]]"
 context: coffee-meeting
 about:
   - "[[University Service-Learning Partnership]]"
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 followup: true
 tags:
   - interaction

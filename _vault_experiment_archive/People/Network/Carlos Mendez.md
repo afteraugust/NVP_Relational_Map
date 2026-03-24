@@ -10,9 +10,9 @@ introduced-by: "[[Priya Sharma]]"
 knows:
   - "[[Priya Sharma]]"
   - "[[Rev. James Whitfield]]"
-  - "[[August]]"
+  - "[[AugustElliott]]"
 warmth: warm
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 last-contact: 2026-02-07
 next-followup: 2026-02-21
 interests:
@@ -36,4 +36,4 @@ Owner of Mendez Hardware, a neighborhood institution (30+ years). Board member o
 ## Key Relationships
 - [[Priya Sharma]] — fellow merchant, mutual respect, she introduced him to our work
 - [[Rev. James Whitfield]] — longtime friend and parishioner, faith-business bridge
-- [[August]] — developing partnership relationship
+- [[AugustElliott]] — developing partnership relationship

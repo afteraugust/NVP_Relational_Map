@@ -4,7 +4,7 @@ role: NVP-team
 orgs:
   - "[[NVP]]"
 cadence: as-needed
-owner: "[[Savannah]]"
+owner: "[[SavannahKruger]]"
 tags:
   - person
   - team

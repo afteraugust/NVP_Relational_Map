@@ -8,7 +8,7 @@ introduced-by: "[[Councilwoman Diane Okafor]]"
 knows:
   - "[[Councilwoman Diane Okafor]]"
 warmth: cool
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 last-contact: 2026-01-15
 next-followup: 2026-03-15
 interests:

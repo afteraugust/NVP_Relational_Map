@@ -9,9 +9,9 @@ introduced-by:
 knows:
   - "[[Carlos Mendez]]"
   - "[[Rachel Torres]]"
-  - "[[August]]"
+  - "[[AugustElliott]]"
 warmth: warm
-owner: "[[August]]"
+owner: "[[AugustElliott]]"
 last-contact: 2026-02-07
 next-followup: 2026-02-21
 interests:
@@ -34,4 +34,4 @@ Met at a merchant association mixer in late 2025. Owner of Sharma's Kitchen, a p
 ## Key Relationships
 - [[Carlos Mendez]] — fellow Main Street Alliance member, mutual respect, both longtime merchants
 - [[Rachel Torres]] — social media connection, Rachel promotes Sharma's Kitchen regularly
-- [[August]] — primary contact, developing partnership around events and business engagement
+- [[AugustElliott]] — primary contact, developing partnership around events and business engagement

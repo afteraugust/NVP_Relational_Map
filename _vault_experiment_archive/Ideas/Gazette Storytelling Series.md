@@ -1,7 +1,7 @@
 ---
 type: idea
 status: exploring
-proposed-by: "[[August]]"
+proposed-by: "[[AugustElliott]]"
 relevant-to:
   - "[[Spring Block Party Series]]"
   - "[[Know Your Neighbor Survey]]"
@@ -25,7 +25,7 @@ Monthly storytelling series in the [[Riverside Gazette]] profiling neighborhood 
 
 ## Who's Involved
 - [[Tom Nguyen]] — writer, pitching to his editor (as of Feb 3)
-- [[August]] — proposed the concept
+- [[AugustElliott]] — proposed the concept
 - [[Maria Chen]] — would help identify story subjects from network
 - [[Rachel Torres]] — natural first profile subject, and would amplify each story via Facebook
 
