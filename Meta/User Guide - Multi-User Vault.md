@@ -32,7 +32,7 @@ The other person's version of the text
 >>>>>>> origin/main
 ```
 
-Fix it by keeping the text you want and deleting the marker lines (`<<<<<<<`, `=======`, `>>>>>>>`). Save the file. The next auto-sync will commit your resolution.
+Fix it by keeping the text you want and deleting the marker lines (`<<<<<<<`, `>>>>>>>`, etc). Save the file. The next auto-sync will commit your resolution.
 
 ### "My changes disappeared"
 
