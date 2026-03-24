@@ -58,13 +58,13 @@ Open the command palette → "Obsidian Git: Pull" and then "Obsidian Git: Push".
 
 All available from the command palette (Cmd+P):
 
-| Command | What it does |
-|---|---|
-| Git: Commit-and-sync | Commits, pulls, and pushes in one step — **use this one** |
-| Git: Commit all changes | Commits locally only (does not push) |
-| Git: Push | Sends your commits to the remote |
-| Git: Pull | Fetches the other user's changes |
-| Obsidian Git: Open file history | Shows version history for the current note |
+| Command                         | What it does                                              |
+| ------------------------------- | --------------------------------------------------------- |
+| **Git: Commit-and-sync**        | Commits, pulls, and pushes in one step — **use this one** |
+| Git: Commit all changes         | Commits locally only (does not push)                      |
+| Git: Push                       | Sends your commits to the remote                          |
+| Git: Pull                       | Fetches the other user's changes                          |
+| Obsidian Git: Open file history | Shows version history for the current note                |
 
 ## What Not to Worry About
 
