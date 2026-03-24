@@ -94,6 +94,27 @@ Bases is a core plugin (already enabled). To create a view:
 - **Interaction Log:** Source `Interactions/`, columns: date, participants, context, about
 - **Project Tracker:** Source `Projects/`, columns: status, lead, partners, funded-by
 
+## Property Types (Critical — Do This Once)
+
+Open Settings → Properties and set the type for each field. This tells Obsidian whether a field contains text, links, dates, or tags. **If link fields are set to "Text," the values won't create connections in the graph or ExcaliBrain.**
+
+**Link** (single link to another note):
+`introduced-by`, `source-org`, `lead`, `owner`, `logged-by`
+
+**List of links** (multiple links):
+`orgs`, `members`, `partners-with`, `partners`, `funded-by`, `participants`, `about`, `contact`, `connected-via`, `focus-areas`
+
+**Text:**
+`type`, `role`, `category`, `cadence`, `status`, `context`
+
+**Date:**
+`date`
+
+**Tags:**
+`tags`
+
+If you've already entered values as plain text in link fields, you'll need to convert them: switch to source mode (Cmd+E) on each affected note and wrap values in `[[brackets]]`. Then change the property type in Settings → Properties. The old plain-text suggestions will stop appearing once no files contain plain-text values in those fields.
+
 ## Plugin Installation Order
 
 If setting up from scratch, install in this order:
@@ -102,3 +123,4 @@ If setting up from scratch, install in this order:
 3. Excalidraw (ExcaliBrain depends on it)
 4. ExcaliBrain (configure ontology after install)
 5. Homepage, Calendar, Various Complements, Tag Wrangler (in any order)
+6. **Then:** Configure property types (see above)
