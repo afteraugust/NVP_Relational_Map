@@ -30,15 +30,10 @@ Five types of notes, each with a `type` property in frontmatter:
 | `funder` | A funding source or relationship | Funder entity (not individual grants — those live in the note body) |
 | `interaction` | A dated record of a meeting, call, email, or event | Conversation or encounter |
 
-**Why five and not more?** These cover the full relational lifecycle: people cluster around orgs, orgs connect to funders, funders enable projects, projects attract more people. Each type earns its place by driving a distinct view or query.
-
-**Why no Idea type?** The vault's purpose is contacts and relationships, not idea capture. A `Project` with `status: idea` stages early concepts without adding a separate entity type, template, or folder. When an idea matures, you just change its status — no migration needed. Actual brainstorming and ideation live wherever your team already does that work.
 
 ---
 
 ## 3. Frontmatter Schemas
-
-The design goal: **every field should be something you'll fill in for 80%+ of new entries**. Optional context goes in the note body, not frontmatter.
 
 ### 3.1 Person
 
