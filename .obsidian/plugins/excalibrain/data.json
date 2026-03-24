@@ -166,8 +166,16 @@
   "navigationHistory": [
     "People/Team/August.md",
     "_vault_experiment_archive/Projects/Small Business Partnership Program.md",
-    "Organizations/NVP.md",
-    "Organizations/CoHous.md"
+    "Organizations/CoHous.md",
+    "Organizations/CommunityWorks.md",
+    "Organizations/TogetherChicago.md",
+    "People/Team/MacKenzieSchuller.md",
+    "People/Team/AugustElliott.md",
+    "People/Network/MeganGinn.md",
+    "People/Network/NateTubbs.md",
+    "People/Network/TrishBecker.md",
+    "Organizations/AllianceForFlourishingNeighborhoods.md",
+    "Organizations/NVP.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

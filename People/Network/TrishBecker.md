@@ -6,7 +6,7 @@ orgs:
   - "[[CoHous]]"
 introduced-by: "[[]]"
 cadence:
-owner: "[[null]]"
+owner:
 tags:
   - person
   - NVPboard
