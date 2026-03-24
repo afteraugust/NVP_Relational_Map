@@ -174,8 +174,8 @@
     "Organizations/CoHous.md",
     "People/Network/TrishBecker.md",
     "People/Network/NateTubbs.md",
-    "Organizations/NVP.md",
-    "Organizations/AllianceForFlourishingNeighborhoods.md"
+    "Organizations/AllianceForFlourishingNeighborhoods.md",
+    "Organizations/NVP.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",
