@@ -9,7 +9,7 @@ cadence:
 owner:
 tags:
   - person
-  - NVPboard
+  - NVP_Board
 ---
 
 ## Context

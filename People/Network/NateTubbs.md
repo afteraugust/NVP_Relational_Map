@@ -6,14 +6,14 @@ orgs:
   - "[[TogetherChicago]]"
 introduced-by: "[[]]"
 cadence:
-owner: "[[null]]"
+owner:
 tags:
   - person
 ---
 
 ## Context
 Who they are and how we connected:
-
+#NVP_Board 
 
 ## Key Contacts
 Who they know that matters to us:

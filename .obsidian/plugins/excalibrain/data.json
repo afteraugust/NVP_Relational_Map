@@ -170,12 +170,12 @@
     "People/Team/MacKenzieSchuller.md",
     "People/Team/AugustElliott.md",
     "People/Network/MeganGinn.md",
-    "People/Network/NateTubbs.md",
-    "Organizations/TogetherChicago.md",
-    "People/Network/TrishBecker.md",
-    "Organizations/CoHous.md",
     "Organizations/NVP.md",
-    "Organizations/AllianceForFlourishingNeighborhoods.md"
+    "Organizations/AllianceForFlourishingNeighborhoods.md",
+    "Organizations/TogetherChicago.md",
+    "Organizations/CoHous.md",
+    "People/Network/NateTubbs.md",
+    "People/Network/TrishBecker.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",
