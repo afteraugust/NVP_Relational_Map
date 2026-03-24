@@ -3,9 +3,6 @@ type: organization
 category:
 members:
   - "[[]]"
-  - AugustElliott
-  - SavannahKruger
-  - MacKenzieSchuller
 partners-with:
   - "[[]]"
   - AllianceForFlourishingNeighborhoods

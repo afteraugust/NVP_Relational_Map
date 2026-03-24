@@ -165,7 +165,9 @@
   },
   "navigationHistory": [
     "People/Team/August.md",
-    "_vault_experiment_archive/Projects/Small Business Partnership Program.md"
+    "_vault_experiment_archive/Projects/Small Business Partnership Program.md",
+    "Organizations/NVP.md",
+    "Organizations/CoHous.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

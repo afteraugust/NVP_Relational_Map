@@ -4,11 +4,14 @@ category:
 members:
   - "[[]]"
   - AugustElliott
-  - SavannahKruger
   - MacKenzieSchuller
+  - NateTubbs
+  - SavannahKruger
+  - MeganGinn
 partners-with:
   - "[[]]"
-  - AllianceForFlourishingNeighborhoods
+  - TogetherChicago
+  - CommunityWorks
 relevance:
   - 
 tags:

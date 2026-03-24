@@ -3,9 +3,7 @@ type: organization
 category:
 members:
   - "[[]]"
-  - AugustElliott
-  - SavannahKruger
-  - MacKenzieSchuller
+  - NateTubbs
 partners-with:
   - "[[]]"
   - AllianceForFlourishingNeighborhoods
