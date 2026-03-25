@@ -1,8 +1,7 @@
 ---
 type: person
 role: funder-contact
-orgs:
-  - "[[]]"
+orgs: []
 introduced-by: "[[]]"
 cadence: quarterly
 owner: "[[Savannah]]"

@@ -18,7 +18,7 @@ What this project is and what it aims to accomplish:
 
 ## Partners & Stakeholders
 Who's involved and what they contribute:
-
+[[EmilianoLake-Herrera]] - 
 
 ## Status & Next Steps
 Current state and upcoming milestones:
