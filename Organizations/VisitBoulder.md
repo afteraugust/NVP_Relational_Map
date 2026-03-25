@@ -1,5 +1,5 @@
 ---
-type: project
+type: organization
 status: planning
 lead: "[[Savannah]]"
 partners:
