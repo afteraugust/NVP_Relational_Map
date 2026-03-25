@@ -11,7 +11,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-Works for [[VisitBoulder]]
+- Works for [[VisitBoulder]]
+
 
 ## Key Contacts
 Who they know that matters to us:
