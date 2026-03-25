@@ -1,6 +1,6 @@
 ---
 type: project
-status: 
+status: planning
 lead: "[[Savannah]]"
 partners:
   - "[[]]"
@@ -8,6 +8,8 @@ funded-by:
   - "[[]]"
 tags:
   - project
+  - funder
+  - organization
 ---
 
 ## Description
