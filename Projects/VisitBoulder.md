@@ -28,4 +28,6 @@ Charlene Hoffman — CEO of Visit Boulder. City of Boulder — Visit Boulder ope
 Current state and upcoming milestones:
 - Savannah emailed Emiliano on 3/25/26 to ask about grant award amounts (not published anywhere). 
 - Kenzie + Sav applying to EAC Grant in late March 2026. 
+
+
 - Potential longer-term play: positioning NVP as social infrastructure that makes Boulder a stronger destination — aligns with their Sustainable Tourism Plan goals.
