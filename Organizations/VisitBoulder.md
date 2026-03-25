@@ -7,7 +7,6 @@ partners:
 funded-by:
   - "[[]]"
 tags:
-  - project
   - funder
   - organization
 ---
