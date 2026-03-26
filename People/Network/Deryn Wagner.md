@@ -1,9 +1,8 @@
 ---
 type: person
-role: business-owner
-orgs:
-  - "[[]]"
-introduced-by: "[[]]"
+role: elected-official
+orgs: 
+introduced-by: Trish???
 cadence: monthly
 owner: "[[Savannah]]"
 tags:
