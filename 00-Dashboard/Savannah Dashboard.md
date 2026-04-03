@@ -7,6 +7,8 @@ tags:
 
 **[[Home]]** | **[[August Dashboard]]**
 
+[[Strategies]]
+
 ---
 
 ## My Overdue Contacts
