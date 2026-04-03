@@ -19,4 +19,4 @@ Who they know that matters to us:
 
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
-
+- 4/3/2026: We had 
