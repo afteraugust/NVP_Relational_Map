@@ -12,7 +12,7 @@ tags:
 
 ## Context
 Who they are and how we connected:
-- Program Manager at [[Community Foundation of Boulder County]]
+- Program Manager at [[Community Foundation of Boulder County]]: https://www.commfound.org/staff/sydney-zorensky/ Her contact info is right there on the website so we should reach out!
 
 ## Key Contacts
 Who they know that matters to us:
