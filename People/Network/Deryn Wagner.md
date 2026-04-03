@@ -19,4 +19,5 @@ Who they know that matters to us:
 
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
-- 4/3/2026: We had 
+- [[[Benya Basseches]] introduces [[Savannah Kruger]] and [[Deryn Wagner]] over email
+- 4/3/2026: We had tea with her at Brewing Market. 
