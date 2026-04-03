@@ -1,11 +1,11 @@
 ---
 type: person
-role: contact
+role: funder-contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
 cadence: monthly
-owner: "[[August]]"
+owner: "[[Savannah]]"
 tags:
   - person
 ---
@@ -16,10 +16,8 @@ Who they are and how we connected:
 
 ## Key Contacts
 Who they know that matters to us:
-
+- Knows [[Savannah Kruger]] vaguely 
 
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
-- Roommate of [[August Elliott]] & [[MacKenzie Schuller]], friend of [[Savannah Kruger]]
-- Works in Wildfire things - could have ideas for who to partner with + opportunities
-- 
+

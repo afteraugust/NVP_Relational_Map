@@ -1,9 +1,8 @@
 ---
 type: organization
-category: 
+category: foundation
 members:
   - "[[]]"
-  - "[[Trish Becker-Hafnor]]"
 partners-with:
   - "[[]]"
 relevance:
@@ -18,9 +17,7 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-[[Trish Becker-Hafnor]] 
-- Executive Director for [[CoHous]]
-- Board Member for [[NVP]]
+- Savannah knows  on some board there
 
 ## Collaboration History
 Past and current ways we've worked together:

@@ -17,7 +17,7 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-- [[ClaireLevy]]
+- [[Claire Levy]]
 
 ## Collaboration History
 Past and current ways we've worked together:

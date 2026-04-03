@@ -23,4 +23,4 @@ Our contacts there and their roles:
 
 ## Collaboration History
 Past and current ways we've worked together:
-- [[SavannahKruger]] and [[AugustElliott]] participated in legalizing housing co-ops 
+- [[Savannah Kruger]] and [[August Elliott]] participated in legalizing housing co-ops 

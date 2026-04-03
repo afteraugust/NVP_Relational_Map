@@ -1,9 +1,9 @@
 ---
 type: organization
-category:
+category: 
 members:
   - "[[]]"
-  - "[[NateTubbs]]"
+  - "[[Nate Tubbs]]"
 partners-with:
   - "[[]]"
   - "[[AllianceForFlourishingNeighborhoods]]"

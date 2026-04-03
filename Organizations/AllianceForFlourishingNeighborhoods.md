@@ -1,13 +1,13 @@
 ---
 type: organization
-category:
+category: 
 members:
   - "[[]]"
-  - "[[AugustElliott]]"
-  - "[[MacKenzieSchuller]]"
-  - "[[MeganGinn]]"
-  - "[[NateTubbs]]"
-  - "[[SavannahKruger]]"
+  - "[[August Elliott]]"
+  - "[[MacKenzie Schuller]]"
+  - "[[Megan Ginn]]"
+  - "[[Nate Tubbs]]"
+  - "[[Savannah Kruger]]"
 partners-with:
   - "[[]]"
   - "[[NVP]]"

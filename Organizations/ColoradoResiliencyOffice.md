@@ -18,7 +18,7 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-- [[MorganFerris]] is connected to the CRO
+- [[People/NVP Stewards/Morgan Ferris]] is connected to the CRO
 
 ## Collaboration History
 Past and current ways we've worked together:

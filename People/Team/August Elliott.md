@@ -3,8 +3,8 @@ type: person
 role: NVP-team
 orgs:
   - "[[NVP]]"
-cadence:
-owner: "[[AugustElliott]]"
+cadence: 
+owner: "[[August Elliott]]"
 tags:
   - person
   - team

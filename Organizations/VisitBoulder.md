@@ -17,7 +17,7 @@ Visit Boulder (Boulder CVB) runs the Events, Arts & Culture Grant Program (EAC) 
 
 ## Partners & Stakeholders
 Who's involved and what they contribute:
-[[EmilianoLake-Herrera]] - Vice President, Visitor Experience & Community Partnerships  
+[[Emiliano Lake-Herrera]] - Vice President, Visitor Experience & Community Partnerships  
 	[emiliano.lake-herrera@bouldercvb.com](mailto:emiliano.lake-herrera@bouldercvb.com)  
 	303-442-2911, ext. 133
 

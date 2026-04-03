@@ -1,11 +1,11 @@
 ---
 type: organization
-category:
+category: 
 members:
   - "[[]]"
-  - "[[AugustElliott]]"
-  - "[[SavannahKruger]]"
-  - "[[MacKenzieSchuller]]"
+  - "[[August Elliott]]"
+  - "[[Savannah Kruger]]"
+  - "[[MacKenzie Schuller]]"
 partners-with:
   - "[[]]"
   - "[[AllianceForFlourishingNeighborhoods]]"
