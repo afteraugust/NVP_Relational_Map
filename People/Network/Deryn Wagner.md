@@ -2,7 +2,7 @@
 type: person
 role: elected-official
 orgs: 
-introduced-by: Trish???
+introduced-by: 
 cadence: monthly
 owner: "[[Savannah]]"
 tags:
