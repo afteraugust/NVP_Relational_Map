@@ -19,7 +19,8 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-[[Lincoln Miller]] 
+- [[Lincoln Miller]] 
+- [[Eric Budd]]
 
 ## Collaboration History
 Past and current ways we've worked together:
