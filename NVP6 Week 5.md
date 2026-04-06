@@ -73,4 +73,6 @@
 - Debrief: What felt natural? What felt forced? Did anything surprise you?
 - Facilitator note: Keep this light. The point isn't to drill a technique. It's to let them feel that they can already do this.
 
+**Delegation Practice** (10 min)
+
 
