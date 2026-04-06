@@ -63,6 +63,8 @@
   - **Notice something real.** Comment on what's actually in front of you. Their garden, something they're carrying, a kid on a bike, the construction down the street. This is grounded and easy because you're not reaching for a topic. The topic is already there.
   - **Ask, then follow.** Ask one question and actually listen to the answer. If they mention something with even a little energy, follow it. "Oh, you garden? What are you growing?" You don't have to go deep. You just have to show that you heard them.
   - **Let it be short if it wants to be.** A good small talk interaction can be 1 minute long. The goal is not necessarily a long conversation. The goal is to leave the other person feeling a little more seen than they were before. The length will naturally grow over time as you keep running into each other.
+  - Q: In conversation do you lean towards sharing or asking more? 
+  -  **Ask and Offer.** Share details about yourself so they get to know you. Ask them for details about themselves so you get to know them. Strike the balance if you lean one way or another. 
 - What to emphasize: Small talk is a skill, and like all skills it gets easier with practice. The stewards have already been practicing it with every doorknock, every walk, every wave. This session just names what they've been doing and gives them permission to trust that it's working even when it feels small.
 
 **Practice (if time)**
@@ -70,3 +72,5 @@
 - Pair up. Have a 60-second small talk conversation as if you just ran into each other in the neighborhood. Then switch partners and do it again.
 - Debrief: What felt natural? What felt forced? Did anything surprise you?
 - Facilitator note: Keep this light. The point isn't to drill a technique. It's to let them feel that they can already do this.
+
+
