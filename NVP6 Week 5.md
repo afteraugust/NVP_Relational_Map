@@ -25,6 +25,7 @@
 - The listener doesn't solve anything and doesn't give advice. They can ask one follow-up question on either side, but the point is presence, not problem-solving.
 - Bring the group back together. Ask: "Did anyone hear something from their partner that surprised them?" or "Did saying it out loud change how it felt?"
 - What to emphasize: The skill you just practiced, listening without fixing, is the same skill you'll use at your event. When a neighbor walks up and seems uncomfortable, you don't need to have the perfect thing to say. You just need to be warm and present. And holding both the fear and the excitement at the same time? That's what this work feels like. You don't have to pick one.
+3. Delegation. 
 
 **Close**
 
