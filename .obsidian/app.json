@@ -1,4 +1,6 @@
 {
   "alwaysUpdateLinks": true,
-  "tabSize": 3
+  "tabSize": 3,
+  "showRibbon": true,
+  "attachmentFolderPath": "/"
 }
