@@ -2,5 +2,6 @@
   "alwaysUpdateLinks": true,
   "tabSize": 3,
   "showRibbon": true,
-  "attachmentFolderPath": "/"
+  "attachmentFolderPath": "/",
+  "promptDelete": false
 }
