@@ -11,7 +11,7 @@ tags:
 ---
 
 ## Role
-Strategy & Partnerships — external relationships, funding pipeline, strategic partnerships.
+- Co-founder, Program Director, Facilitator of [[neighborhood It's the best huge fan command option back., Strategy & Partnerships — external relationships, funding pipeline, strategic partnerships.
 
 ## Relationship Ownership
 Business community, partnership development, strategic contacts, funder relationships.
