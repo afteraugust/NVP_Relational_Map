@@ -8,7 +8,7 @@ members:
   - "[[MacKenzie Schuller]]"
 partners-with:
   - "[[]]"
-  - "[[AllianceForFlourishingNeighborhoods]]"
+  - "[[Alliance for Flourishing Neighborhoods]]"
 relevance:
   - 
 tags:

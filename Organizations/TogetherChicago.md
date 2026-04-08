@@ -6,7 +6,7 @@ members:
   - "[[Nate Tubbs]]"
 partners-with:
   - "[[]]"
-  - "[[AllianceForFlourishingNeighborhoods]]"
+  - "[[Alliance for Flourishing Neighborhoods]]"
 relevance:
   - 
 tags:

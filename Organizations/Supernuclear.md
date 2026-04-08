@@ -1,15 +1,14 @@
 ---
 type: organization
-category: 
+category: media
 members:
   - "[[]]"
 partners-with:
   - "[[]]"
-  - "[[Alliance for Flourishing Neighborhoods]]"
-relevance:
-  - 
+relevance: 
 tags:
   - organization
+  - substack
 ---
 
 ## About
