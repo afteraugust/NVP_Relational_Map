@@ -1,16 +1,14 @@
 ---
 type: organization
-category: foundation
+category: neighborhood
 members:
   - "[[]]"
 partners-with:
   - "[[]]"
-relevance:
-  - 
+relevance: 
 tags:
   - organization
 ---
-		
 
 ## About
 What this org does and why it matters to our work:
@@ -18,7 +16,7 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-
+- [[Matt Bernstein]]
 
 ## Collaboration History
 Past and current ways we've worked together:

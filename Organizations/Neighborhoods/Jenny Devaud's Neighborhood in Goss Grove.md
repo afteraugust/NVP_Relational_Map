@@ -1,17 +1,15 @@
 ---
 type: organization
-category: foundation
+category: neighborhood
 members:
   - "[[]]"
 partners-with:
   - "[[]]"
-relevance:
-  - 
+relevance: 
 tags:
   - organization
 ---
-		
-
+https://www.facebook.com/jenny.devaud?comment_id=Y29tbWVudDoxMDIzMTY2MTY5NDgzNDY4M18zODI2OTY2NDc0Mjc4OTc2
 ## About
 What this org does and why it matters to our work:
 

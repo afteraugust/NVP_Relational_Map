@@ -1,10 +1,10 @@
 ---
 type: person
-role: contact
+role: community-leader
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: quarterly
+cadence: monthly
 owner: "[[Savannah]]"
 tags:
   - person
@@ -16,7 +16,11 @@ Who they are and how we connected:
 
 ## Key Contacts
 Who they know that matters to us:
-- Partner of 
+Friends with: 
+- [[Aaron Gabriel AG Neyer]]
+- [[Jon Borichevskiy]]
+- Partner: [[Benya Basseches]]
+- 
 
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
