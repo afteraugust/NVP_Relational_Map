@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:People",
@@ -43,16 +43,16 @@
       }
     }
   ],
-  "collapse-display": true,
-  "showArrow": false,
+  "collapse-display": false,
+  "showArrow": true,
   "textFadeMultiplier": -1.1,
-  "nodeSizeMultiplier": 0.681236979166667,
-  "lineSizeMultiplier": 1.18484809027778,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "nodeSizeMultiplier": 0.819117592489517,
+  "lineSizeMultiplier": 1.8564288099744,
+  "collapse-forces": false,
+  "centerStrength": 0.508887157222903,
+  "repelStrength": 7.85706334186797,
   "linkStrength": 1,
-  "linkDistance": 250,
+  "linkDistance": 118,
   "scale": 1.3924434989914096,
-  "close": true
+  "close": false
 }
