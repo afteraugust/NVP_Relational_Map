@@ -16,8 +16,7 @@ Who they are and how we connected:
 
 ## Key Contacts
 Who they know that matters to us:
-- She has a relationship with people at [[Colorado Resiliency Office]]
-
+- Can introduce us to someone named Kate at the [[Colorado Resiliency Office]]
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
 
