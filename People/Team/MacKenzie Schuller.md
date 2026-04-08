@@ -1,11 +1,11 @@
 ---
 type: person
-role:
+role: 
 orgs:
   - "[[]]"
-  - "[[NVP]]"
+  - "[[Neighborhood Village Project NVP]]"
 introduced-by: "[[]]"
-cadence:
+cadence: 
 owner: "[[null]]"
 tags:
   - person

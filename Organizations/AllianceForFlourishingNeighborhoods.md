@@ -10,7 +10,7 @@ members:
   - "[[Savannah Kruger]]"
 partners-with:
   - "[[]]"
-  - "[[NVP]]"
+  - "[[Neighborhood Village Project NVP]]"
   - "[[TogetherChicago]]"
   - "[[CommunityWorks]]"
 relevance:

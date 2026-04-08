@@ -16,7 +16,7 @@ tags:
 Who they are and how we connected:
 
 - Executive Director of [[CoHous]]
-- Board Member of [[NVP]]
+- Board Member of [[Neighborhood Village Project NVP]]
 
 ## Key Contacts
 Who they know that matters to us:

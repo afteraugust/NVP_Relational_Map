@@ -2,7 +2,7 @@
 type: person
 role: NVP-team
 orgs:
-  - "[[NVP]]"
+  - "[[Neighborhood Village Project NVP]]"
 cadence: as-needed
 owner: "[[Savannah Kruger]]"
 tags:
