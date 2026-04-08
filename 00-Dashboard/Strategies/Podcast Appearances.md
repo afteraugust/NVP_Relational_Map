@@ -17,14 +17,14 @@ _High alignment, accessible, likely to say yes. Start here._
 
 ### Community Building & Intentional Living
 
-**Belongfulness** — _"The creative ways people are building community and re-weaving our social fabric"_
+[[Belongfulness]] — _"The creative ways people are building community and re-weaving our social fabric"_
 
 - Apple: https://podcasts.apple.com/us/podcast/belongfulness/id1534202027
 - WHY: The title IS your pitch. This show exists to highlight exactly what NVP does. Playful, earnest tone. Small audience = accessible.
 - PITCH ANGLE: Neighbors as Village + The Founder's Journey
 - NOTE: Already on MacKenzie's list. This should be one of the first pitches you send.
 
-**Inside Community Podcast** — Foundation for Intentional Community
+[[Inside Community Podcast]] — Foundation for Intentional Community
 
 - Host: Rebecca Mesritz
 - https://www.ic.org/podcast/
