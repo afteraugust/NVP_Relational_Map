@@ -17,8 +17,8 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-- [[People/Network/Deb Tien|Deb Tien]] and [[]]
-
+- [[People/Network/Deb Tien|Deb Tien]] and [[Josh Nesbit]] cofounded RTP
+- [[Jon Borichevskiy]] and [[Aaron Gabriel AG Neyer]] participate in some of the things they offer.
 ## Collaboration History
 Past and current ways we've worked together:
 
