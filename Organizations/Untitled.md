@@ -10,8 +10,7 @@ relevance:
 tags:
   - organization
 ---
-https://hearthlandfoundation.org
-Contact Info: info@hearthlandfoundation.org
+
 ## About
 What this org does and why it matters to our work:
 
