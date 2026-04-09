@@ -4,7 +4,7 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: as-needed
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: Pre-existing Neighborhood, Wants to help on the meta level, NAP3
+- Location: In the South of France in the pyrennees - The city is Oloron Ste Marie
 
 ## Key Contacts
 Who they know that matters to us:

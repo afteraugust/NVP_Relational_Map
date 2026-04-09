@@ -5,7 +5,7 @@ orgs:
   - "[[]]"
 introduced-by: "[[]]"
 cadence: as-needed
-owner: "[[Savannah Kruger]]"
+owner: 
 tags:
   - person
 ---

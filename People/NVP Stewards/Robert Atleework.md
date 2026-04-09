@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Kaela Atleework]]"
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP3
+- Location: Bishop CA, USA
+- Referred by [[Kaela Atleework]]
 
 ## Key Contacts
 Who they know that matters to us:

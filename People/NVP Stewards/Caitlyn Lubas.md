@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Chloe Tran]]"
+cadence: monthly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP5
+- Location: Williamsburg, Brooklyn, NY, USA
+- Referred by [[Chloe Tran]]
 
 ## Key Contacts
 Who they know that matters to us:

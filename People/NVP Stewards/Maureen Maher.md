@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Shani Graham]]"
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP4
+- Location: Hilton West Australia
+- Referred by [[Shani Graham]]
 
 ## Key Contacts
 Who they know that matters to us:

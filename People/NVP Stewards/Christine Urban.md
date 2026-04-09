@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP2, exclude from alumni emails
+- Location: Prospera, Honduras
 
 ## Key Contacts
 Who they know that matters to us:

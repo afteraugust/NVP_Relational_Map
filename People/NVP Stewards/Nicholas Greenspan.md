@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Juicy Bassett]]"
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP4
+- Location: Boulder, CO
+- Referred by [[Juicy Bassett]]
 
 ## Key Contacts
 Who they know that matters to us:

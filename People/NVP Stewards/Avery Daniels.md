@@ -4,7 +4,7 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: as-needed
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP2
+- Location: Franklin Park Neighborhood, Allentown, PA, USA
 
 ## Key Contacts
 Who they know that matters to us:

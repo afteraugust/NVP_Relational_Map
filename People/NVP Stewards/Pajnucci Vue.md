@@ -5,6 +5,7 @@ orgs:
   - "[[]]"
 introduced-by: "[[Phil Levin]]"
 cadence: monthly
+owner: 
 tags:
   - person
 ---

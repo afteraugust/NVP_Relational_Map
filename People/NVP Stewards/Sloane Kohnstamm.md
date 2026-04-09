@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Savannah Kruger]]"
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP3
+- Location: Minneapolis, MN
+- Referred by [[Savannah Kruger]]
 
 ## Key Contacts
 Who they know that matters to us:

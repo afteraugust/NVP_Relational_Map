@@ -4,7 +4,7 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: as-needed
+cadence: monthly
 owner: 
 tags:
   - person
@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP5
+- Location: Boulder, CO
 
 ## Key Contacts
 Who they know that matters to us:

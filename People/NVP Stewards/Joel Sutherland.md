@@ -3,7 +3,7 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
+introduced-by: "[[Ben Orenstein]]"
 cadence: as-needed
 owner: 
 tags:
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP3, dropped out
+- Location: Davis Square, Somerville, MA
+- Referred by [[Ben Orenstein]]
 
 ## Key Contacts
 Who they know that matters to us:

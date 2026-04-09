@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: Cohort 0, NAP1, NAP3, exclude from alumni emails
+- Location: Arlington, MA, USA
 
 ## Key Contacts
 Who they know that matters to us:

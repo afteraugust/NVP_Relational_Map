@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Lucile Bourquard]]"
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NAP3
+- Location: Lurbe Saint Christau, village in South West France
+- Referred by [[Lucile Bourquard]]
 
 ## Key Contacts
 Who they know that matters to us:

@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Phil Levin]]"
+cadence: monthly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP6
+- Location: 22015
+- Referred by [[Phil Levin]]
 
 ## Key Contacts
 Who they know that matters to us:

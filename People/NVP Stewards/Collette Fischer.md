@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Emma KUNC]]"
+cadence: monthly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP6
+- Location: Denver
+- Referred by [[Emma KUNC]]
 
 ## Key Contacts
 Who they know that matters to us:

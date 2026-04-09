@@ -4,7 +4,7 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: as-needed
+cadence: quarterly
 owner: 
 tags:
   - person
@@ -12,7 +12,8 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: Cohort 0, NAP1, NAP2
+- Location: Porto, Portugal
 
 ## Key Contacts
 Who they know that matters to us:

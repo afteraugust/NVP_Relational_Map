@@ -3,8 +3,8 @@ type: person
 role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence: as-needed
+introduced-by: "[[Bonnie from City of Melville]]"
+cadence: monthly
 owner: 
 tags:
   - person
@@ -12,7 +12,9 @@ tags:
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP4, NVP5
+- Location: Mount Claremont/ Subi Perth WA
+- Referred by [[Bonnie from City of Melville]]
 
 ## Key Contacts
 Who they know that matters to us:
