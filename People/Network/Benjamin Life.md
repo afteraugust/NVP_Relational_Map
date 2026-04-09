@@ -2,7 +2,6 @@
 type: person
 role: funder-contact
 orgs:
-  - "[[]]"
 introduced-by: "[[]]"
 cadence: monthly
 owner: "[[Savannah Kruger]]"
