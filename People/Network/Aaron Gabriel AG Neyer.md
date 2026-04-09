@@ -1,8 +1,7 @@
 ---
 type: person
 role: contact
-orgs:
-  - "[[]]"
+orgs: []
 introduced-by: "[[]]"
 cadence: monthly
 owner: "[[Savannah Kruger]]"
