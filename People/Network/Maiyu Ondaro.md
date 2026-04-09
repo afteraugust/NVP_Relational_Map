@@ -5,7 +5,7 @@ orgs:
   - "[[]]"
 introduced-by: Savannah
 cadence: monthly
-owner: "[[Savannah]]"
+owner: "[[Savannah Kruger]]"
 tags:
   - person
 ---

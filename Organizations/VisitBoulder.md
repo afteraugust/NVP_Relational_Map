@@ -1,7 +1,7 @@
 ---
 type: organization
 status: planning
-lead: "[[Savannah]]"
+lead: "[[Savannah Kruger]]"
 partners:
   - "[[]]"
 funded-by:

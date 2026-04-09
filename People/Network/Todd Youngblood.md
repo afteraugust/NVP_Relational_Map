@@ -5,7 +5,7 @@ orgs:
   - Regen Hub
 introduced-by: "[[]]"
 cadence: monthly
-owner: "[[Savannah]]"
+owner: "[[Savannah Kruger]]"
 tags:
   - person
 ---

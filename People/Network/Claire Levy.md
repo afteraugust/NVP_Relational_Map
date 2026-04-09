@@ -4,14 +4,14 @@ role: elected-official
 orgs: 
 introduced-by: 
 cadence: as-needed
-owner: "[[Savannah]]"
+owner: "[[Savannah Kruger]]"
 tags:
   - person
 ---
 
 ## Context
 Who they are and how we connected:
-- [[BoulderCounty]]
+- [[Boulder County]]
 
 ## Key Contacts
 Who they know that matters to us:

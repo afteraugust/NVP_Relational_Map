@@ -5,14 +5,14 @@ orgs:
   - "[[]]"
 introduced-by: "[[]]"
 cadence: monthly
-owner: "[[Savannah]]"
+owner: "[[Savannah Kruger]]"
 tags:
   - person
 ---
 
 ## Context
 Who they are and how we connected:
-- Community Engagement Manager at [[CityofBoulder]]
+- Community Engagement Manager at [[City of Boulder]]
 
 ## Key Contacts
 Who they know that matters to us:

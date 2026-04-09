@@ -1,7 +1,7 @@
 ---
 type: project
 status: planning
-lead: "[[Savannah]]"
+lead: "[[Savannah Kruger]]"
 partners:
   - "[[]]"
 funded-by:

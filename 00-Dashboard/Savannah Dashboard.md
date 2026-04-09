@@ -121,7 +121,7 @@ if (rows.length > 0) {
 ```dataview
 TABLE date AS "Date", participants AS "Participants", context AS "Context", about AS "About"
 FROM "Interactions"
-WHERE contains(logged-by, [[Savannah]])
+WHERE contains(logged-by, [[Savannah Kruger]])
   AND date >= date(today) - dur(30 days)
 SORT date DESC
 ```
