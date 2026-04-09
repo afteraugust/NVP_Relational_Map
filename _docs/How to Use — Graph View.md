@@ -39,7 +39,7 @@ Useful filters:
 - `-path:Interactions` — Hide interaction notes (currently set as default)
 - `path:People` — Show only people
 - `path:Organizations` — Show only orgs
-- `-path:Templates -path:Meta -path:00-Dashboard` — Hide system files
+- `-path:_templates -path:_docs -path:00-Dashboard` — Hide system files
 - `tag:#funder` — Show only notes tagged funder
 
 You can combine filters: `path:People OR path:Organizations` shows people and orgs together.

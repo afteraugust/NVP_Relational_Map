@@ -15,14 +15,14 @@ tags:
 ### 2. Templater
 - **Install:** Settings → Community Plugins → Browse → search "Templater" → Install → Enable
 - **Settings:**
-  - Template folder location: `Templates`
+  - Template folder location: `_templates`
   - Trigger Templater on new file creation: **ON**
   - Folder Templates (Settings → Templater → Folder Templates):
-    - `People/` → `Templates/Person Template`
-    - `Organizations/` → `Templates/Organization Template`
-    - `Projects/` → `Templates/Project Template`
-    - `Funders/` → `Templates/Funder Template`
-    - `Interactions/` → `Templates/Interaction Template`
+    - `People/` → `_templates/Person Template`
+    - `Organizations/` → `_templates/Organization Template`
+    - `Projects/` → `_templates/Project Template`
+    - `Funders/` → `_templates/Funder Template`
+    - `Interactions/` → `_templates/Interaction Template`
 - **Why:** Auto-fills templates when you create new notes in the right folders. Prompts you for key fields.
 
 ### 3. Excalidraw

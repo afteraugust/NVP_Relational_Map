@@ -3,7 +3,7 @@ type: funder
 source-org: "[[]]"
 contact: "[[]]"
 connected-via: "[[]]"
-status: <% tp.system.suggester(["prospect", "cultivating", "active", "past"], ["prospect", "cultivating", "active", "past"], false, "Select funder relationship status") %>
+status: null
 focus-areas:
   -
 tags:

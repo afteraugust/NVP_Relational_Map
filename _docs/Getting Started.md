@@ -85,8 +85,8 @@ Organizations/    → Businesses, nonprofits, agencies, churches, etc.
 Projects/         → Your programs and initiatives (including early ideas)
 Funders/          → Funding sources and relationships
 Interactions/     → Dated records of meetings, calls, emails, events
-Templates/        → Don't edit these directly — they auto-fill new notes
-Meta/             → Documentation (you're reading one now)
+_templates/       → Don't edit these directly — they auto-fill new notes
+_docs/            → Documentation (you're reading one now)
 ```
 
 ---

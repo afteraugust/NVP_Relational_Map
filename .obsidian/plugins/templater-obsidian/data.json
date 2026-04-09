@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "Templates",
+  "templates_folder": "_templates",
   "templates_pairs": [
     [
       "",
@@ -16,23 +16,23 @@
   "folder_templates": [
     {
       "folder": "People",
-      "template": "Templates/Person Template.md"
+      "template": "_templates/Person Template.md"
     },
     {
       "folder": "Organizations",
-      "template": "Templates/Organization Template.md"
+      "template": "_templates/Organization Template.md"
     },
     {
       "folder": "Projects",
-      "template": "Templates/Project Template.md"
+      "template": "_templates/Project Template.md"
     },
     {
       "folder": "Funders",
-      "template": "Templates/Funder Template.md"
+      "template": "_templates/Funder Template.md"
     },
     {
       "folder": "Interactions",
-      "template": "Templates/Interaction Template.md"
+      "template": "_templates/Interaction Template.md"
     }
   ],
   "enable_file_templates": false,

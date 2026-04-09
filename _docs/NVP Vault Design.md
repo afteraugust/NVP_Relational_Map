@@ -183,8 +183,8 @@ NVP_Relational_Map/
 ├── Projects/
 ├── Funders/
 ├── Interactions/
-├── Templates/
-├── Meta/
+├── _templates/
+├── _docs/
 │   ├── Vault Design.md (this file)
 │   ├── Conventions.md
 │   └── Plugin Setup.md
@@ -196,8 +196,8 @@ NVP_Relational_Map/
 - **00-Dashboard/** sorts first. Two personal dashboards + a shared home.
 - **People/Team/** vs **People/Network/** separates your internal files from the growing contact list. Bases and Dataview query across both seamlessly.
 - **Interactions/** is where most new files land. Named `YYYY-MM-DD Title` for chronological sorting.
-- **Templates/** holds Templater templates.
-- **Meta/** holds documentation for how to use the vault.
+- **_templates/** holds Templater templates.
+- **_docs/** holds documentation for how to use the vault.
 - No **Ideas/** folder — early-stage concepts live in **Projects/** with `status: idea`.
 - No **Maps/** folder — ExcaliBrain generates visualizations on the fly, no manual map files needed.
 
@@ -242,7 +242,7 @@ What this gives you: navigate to a foundation and immediately see its staff cont
 
 ### 5.4 Templater Configuration
 
-- Template folder: `Templates/`
+- Template folder: `_templates/`
 - Enable "Trigger Templater on new file creation"
 - Folder templates:
   - `People/` → Person Template
