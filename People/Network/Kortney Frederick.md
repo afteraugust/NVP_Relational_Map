@@ -1,18 +1,20 @@
 ---
 type: person
-role:
+role: contact
 orgs:
   - "[[]]"
-introduced-by: "[[]]"
-cadence:
-owner: "[[null]]"
+introduced-by: "[[Phil Levin]]"
+cadence: monthly
+owner: "[[August Elliott]]"
 tags:
   - person
 ---
 
 ## Context
 Who they are and how we connected:
-
+- Cohort: NVP6
+- Location: 22015
+- Referred by [[Phil Levin]]
 
 ## Key Contacts
 Who they know that matters to us:

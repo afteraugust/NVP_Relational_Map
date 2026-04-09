@@ -27,8 +27,8 @@ These queries run every time you open the dashboard. They always reflect the cur
 | Dashboard | What it shows |
 |-----------|--------------|
 | **Home** | Overdue contacts (all), upcoming touchpoints (all), relational suggestions, funding pipeline, recent interactions, active projects |
-| **August Dashboard** | Same views filtered to `owner: [[August]]` |
-| **Savannah Dashboard** | Same views filtered to `owner: [[Savannah]]` |
+| **August Dashboard** | Same views filtered to `owner: [[August Elliott]]` |
+| **Savannah Dashboard** | Same views filtered to `owner: [[Savannah Kruger]]` |
 
 ---
 

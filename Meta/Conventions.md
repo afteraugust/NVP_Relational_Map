@@ -39,7 +39,7 @@ tags:
 | `contact` | Default for anyone in your network |
 | `faith` | Faith leaders and faith community contacts |
 | `funder-contact` | People at funding organizations |
-| `elected-official` | Elected officials and political contacts |
+| `govt-official` | Government officials and political contacts |
 | `business-owner` | Business owners and entrepreneurs |
 | `media` | Journalists, editors, media contacts |
 | `community-leader` | Community organizers, neighborhood leaders |

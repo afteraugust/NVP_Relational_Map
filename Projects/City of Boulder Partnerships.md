@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-lead: "[[August]]"
+lead: "[[August Elliott]]"
 partners:
   - "[[]]"
 funded-by:

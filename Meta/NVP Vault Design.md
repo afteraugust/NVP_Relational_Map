@@ -45,7 +45,7 @@ orgs:
   - "[[Org Name]]"
 introduced-by: "[[Person Name]]"
 cadence: monthly
-owner: "[[August]]"
+owner: "[[August Elliott]]"
 tags:
   - person
 ---
@@ -53,11 +53,11 @@ tags:
 
 **Field notes:**
 
-- **role** — Single value. One of: `NVP-team`, `NVP-board-member`, `contact`, `faith`, `funder-contact`, `elected-official`, `business-owner`, `media`, `community-leader`. Default is `contact`. Pick the *primary* role; secondary roles go in the note body.
+- **role** — Single value. One of: `NVP-team`, `NVP-board-member`, `contact`, `faith`, `funder-contact`, `govt-official`, `business-owner`, `media`, `community-leader`. Default is `contact`. Pick the *primary* role; secondary roles go in the note body.
 - **orgs** — Wikilinks to Organization notes. Most people have 1-2.
 - **introduced-by** — How this person entered your network. Critical for pathway mapping. Leave blank if they're an original contact.
 - **cadence** — How often you *want* to be in touch. One of: `weekly`, `biweekly`, `monthly`, `quarterly`, `as-needed`. Dataview computes whether you're on track by comparing this against your most recent interaction.
-- **owner** — Which team member owns the primary relationship. `[[August]]` or `[[Savannah]]`.
+- **owner** — Which team member owns the primary relationship. `[[August Elliott]]` or `[[Savannah Kruger]]`.
 - **tags** — Always includes `person`. Optionally add `funder-adjacent` if they're connected to funding.
 
 
@@ -91,7 +91,7 @@ tags:
 ---
 type: project
 status: active
-lead: "[[August]]"
+lead: "[[August Elliott]]"
 partners:
   - "[[Org Name]]"
 funded-by:
@@ -142,12 +142,12 @@ A Funder note represents your **funding relationship** with a source — not a s
 type: interaction
 date: 2026-03-19
 participants:
-  - "[[August]]"
+  - "[[August Elliott]]"
   - "[[Person Name]]"
 context: call
 about:
   - "[[Project or Org Name]]"
-logged-by: "[[August]]"
+logged-by: "[[August Elliott]]"
 tags:
   - interaction
 ---
@@ -542,7 +542,7 @@ Replace `August` with your name:
 ```dataview
 TABLE date, participants, context, about
 FROM "Interactions"
-WHERE contains(logged-by, [[August]])
+WHERE contains(logged-by, [[August Elliott]])
   AND date >= date(today) - dur(30 days)
 SORT date DESC
 ```

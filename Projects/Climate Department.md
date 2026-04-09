@@ -1,7 +1,7 @@
 ---
 type: project
 status: planning
-lead: "[[August]]"
+lead: "[[August Elliott]]"
 partners:
   - "[[]]"
 funded-by:

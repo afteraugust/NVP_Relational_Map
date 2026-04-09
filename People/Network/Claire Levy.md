@@ -1,6 +1,6 @@
 ---
 type: person
-role: elected-official
+role: govt-official
 orgs: 
 introduced-by: 
 cadence: as-needed

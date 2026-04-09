@@ -5,7 +5,7 @@ orgs:
   - "[[]]"
 introduced-by: "[[]]"
 cadence: monthly
-owner: "[[August]]"
+owner: "[[August Elliott]]"
 tags:
   - person
 ---
