@@ -1,11 +1,10 @@
 ---
 type: interaction
-date: 2026-04-03
+date: 2026-04-09
 participants:
-  - "[[Deryn Wagner]]"
-  - "[[Savannah Kruger]]"
-  - "[[August Elliott]]"
-context:
+  - "[[null]]"
+  - "[[]]"
+context: 
 about:
   - "[[]]"
 logged-by: "[[null]]"
