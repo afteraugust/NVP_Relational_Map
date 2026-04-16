@@ -2,6 +2,7 @@
 type: person
 role: govt-official
 orgs:
+  - "[[City of Boulder]]"
 introduced-by:
 cadence: monthly
 owner: "[[Savannah Kruger]]"
