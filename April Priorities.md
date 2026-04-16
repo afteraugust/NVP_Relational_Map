@@ -5,8 +5,8 @@
 Isabel Sanchez
 - It's time. 
 
-
 Funders 
 - Orgs with Grants coming up: 
 	- [[Community Foundation of Boulder County]]
-	- 
+
+- [[New Pluralists]] - their emails are on their website
