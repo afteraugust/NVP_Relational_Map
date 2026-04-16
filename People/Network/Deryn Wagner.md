@@ -24,4 +24,4 @@ Nature of relationship, what they care about, how we can help each other:
 - [[Benya Basseches]] introduces [[Savannah Kruger]] and [[Deryn Wagner]] over email
 - 4/3/2026: We had tea with her at Brewing Market. She's awesome and it felt really good to talk to her. 
 
--[] 
+- [ ] Reach out and request Deryn introduce us to anyone in the trailerpark communities to see if we can get participants (ask her if there are any other introductions she thinks she could make too)
