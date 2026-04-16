@@ -247,7 +247,7 @@ if (rows.length > 0) {
 
 ### Adjacent People
 
-Other people sharing an org with a priority person, not yet flagged themselves. Scan this to decide who else to reach out to.
+People who show up in a priority person's orbit, via a shared org or by being mentioned in their notes. Use this to decide who else to reach out to.
 
 ```dataviewjs
 const isPriority = (p) => (p.file.tags || []).includes("#currentPriority");
@@ -257,38 +257,110 @@ const asArray = (v) => v ? (Array.isArray(v) ? v : [v]) : [];
 const priorityPeople = dv.pages('"People"').where(p => p.type === "person" && isPriority(p));
 const allPeople = dv.pages('"People"').where(p => p.type === "person");
 
+const pathToPerson = new Map();
+const nameToPerson = new Map();
+for (const p of allPeople) {
+  pathToPerson.set(p.file.path, p);
+  nameToPerson.set(p.file.name, p);
+}
+
+const resolvePerson = (link) => {
+  const raw = link && link.path ? link.path : String(link || "");
+  if (!raw) return null;
+  const byPath = pathToPerson.get(raw);
+  if (byPath) return byPath;
+  const shortName = raw.split("/").pop().replace(/\.md$/, "");
+  return nameToPerson.get(shortName) || null;
+};
+
+// Map each org name to the priority people tied to it
 const orgToPriority = new Map();
 for (const p of priorityPeople) {
   for (const o of asArray(p.orgs)) {
     const name = stripLink(o);
     if (!name) continue;
     if (!orgToPriority.has(name)) orgToPriority.set(name, []);
-    orgToPriority.get(name).push(p.file.link);
+    orgToPriority.get(name).push(p);
+  }
+}
+
+// Adjacency: person name -> reasons + priority connections
+const adjacency = new Map();
+const addAdj = (person, reason, via) => {
+  if (!adjacency.has(person.file.name)) {
+    adjacency.set(person.file.name, {
+      person,
+      sharedOrgs: new Set(),
+      mentionedBy: new Map(),
+      viaPriority: new Map(),
+    });
+  }
+  const entry = adjacency.get(person.file.name);
+  if (reason.type === "org") entry.sharedOrgs.add(reason.org);
+  if (reason.type === "mention") entry.mentionedBy.set(via.file.name, via.file.link);
+  entry.viaPriority.set(via.file.name, via.file.link);
+};
+
+// Source 1: shared org
+for (const p of allPeople) {
+  if (isPriority(p)) continue;
+  const orgs = asArray(p.orgs).map(stripLink).filter(x => x);
+  for (const org of orgs) {
+    if (!orgToPriority.has(org)) continue;
+    for (const pp of orgToPriority.get(org)) {
+      if (pp.file.name === p.file.name) continue;
+      addAdj(p, { type: "org", org }, pp);
+    }
+  }
+}
+
+// Source 2: mentioned inside a priority person's file
+for (const pp of priorityPeople) {
+  const outlinks = pp.file.outlinks || [];
+  for (const link of outlinks) {
+    const linked = resolvePerson(link);
+    if (!linked) continue;
+    if (linked.file.name === pp.file.name) continue;
+    if (isPriority(linked)) continue;
+    addAdj(linked, { type: "mention" }, pp);
+  }
+}
+
+// Source 3: priority person mentioned inside another person's file
+for (const pp of priorityPeople) {
+  for (const p of allPeople) {
+    if (isPriority(p)) continue;
+    const outlinks = p.file.outlinks || [];
+    const mentionsPriority = outlinks.some(l => {
+      const linked = resolvePerson(l);
+      return linked && linked.file.name === pp.file.name;
+    });
+    if (mentionsPriority) addAdj(p, { type: "mention" }, pp);
   }
 }
 
 const rows = [];
-for (const p of allPeople) {
-  if (isPriority(p)) continue;
-  const orgs = asArray(p.orgs).map(stripLink).filter(x => x);
-  const shared = orgs.filter(o => orgToPriority.has(o));
-  if (shared.length === 0) continue;
-
-  const connectedByPath = new Map();
-  for (const o of shared) {
-    for (const link of orgToPriority.get(o)) {
-      const key = link.path || String(link);
-      if (!connectedByPath.has(key)) connectedByPath.set(key, link);
-    }
+for (const entry of adjacency.values()) {
+  const reasons = [];
+  if (entry.sharedOrgs.size > 0) {
+    reasons.push("shared org: " + Array.from(entry.sharedOrgs).join(", "));
   }
-
-  rows.push([p.file.link, shared, Array.from(connectedByPath.values())]);
+  if (entry.mentionedBy.size > 0) {
+    reasons.push("mentioned w/ " + Array.from(entry.mentionedBy.keys()).join(", "));
+  }
+  rows.push([
+    entry.person.file.link,
+    reasons.join("; "),
+    Array.from(entry.viaPriority.values()),
+  ]);
 }
 
+rows.sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+
 if (rows.length > 0) {
-  dv.table(["Person", "Shared Org(s)", "Connected to Priority"], rows);
+  dv.table(["Person", "Why", "Connected to Priority"], rows);
 } else {
-  dv.paragraph("*No adjacent people yet. Adjacency is computed via shared orgs.*");
+  dv.paragraph("*No adjacent people yet. Adjacency comes from shared orgs or mentions in a priority person's notes (and vice versa).*");
 }
 ```
 
