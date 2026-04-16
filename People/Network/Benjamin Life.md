@@ -2,6 +2,7 @@
 type: person
 role: funder-contact
 orgs:
+  - Regen Hub
 introduced-by: "[[]]"
 cadence: monthly
 owner: "[[Savannah Kruger]]"
