@@ -126,11 +126,3 @@ SORT date DESC
 
 ---
 
-## My Funders
-
-```dataview
-TABLE source-org AS "Source Org", contact AS "Contact", status AS "Status", focus-areas AS "Focus Areas"
-FROM "Funders"
-WHERE type = "funder"
-SORT status ASC
-```

@@ -1,12 +1,13 @@
 ---
 type: person
 role: govt-official
-orgs: 
-introduced-by: 
+orgs:
+introduced-by:
 cadence: monthly
 owner: "[[Savannah Kruger]]"
 tags:
   - person
+  - "#currentPriority"
 ---
 
 ## Context
