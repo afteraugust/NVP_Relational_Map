@@ -1,20 +1,20 @@
 ---
 type: person
-role: 
+role: govt-official
 orgs:
   - "[[]]"
+  - "[[City of Boulder]]"
 introduced-by: "[[]]"
-cadence: 
+cadence: as-needed
 owner: "[[null]]"
 tags:
   - person
-  - currentPriority
 ---
 
 ## Context
 Who they are and how we connected:
 
-Mentioned by [[Nicole Speer]], [[Susie Strife]]
+
 ## Key Contacts
 Who they know that matters to us:
 
