@@ -12,11 +12,11 @@ tags:
 ## Context
 Who they are and how we connected:
 
-
+[[City of Boulder]] - Department of Community Engagement
 ## Key Contacts
 Who they know that matters to us:
 
-
+[[Isabel Sanchez]]
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
 - [[Benya Basseches]] introduces [[Savannah Kruger]] and [[Deryn Wagner]] over email
