@@ -4,7 +4,7 @@ role: contact
 orgs:
   - "[[]]"
 introduced-by: "[[]]"
-cadence: monthly
+cadence: as-needed
 owner: "[[August Elliott]]"
 tags:
   - person
