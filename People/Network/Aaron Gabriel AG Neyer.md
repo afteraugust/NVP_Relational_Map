@@ -1,7 +1,8 @@
 ---
 type: person
 role: contact
-orgs: []
+orgs:
+  - "[[Regen Hub]]"
 introduced-by: "[[]]"
 cadence: monthly
 owner: "[[Savannah Kruger]]"
