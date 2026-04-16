@@ -8,6 +8,7 @@ cadence: monthly
 owner: "[[Savannah Kruger]]"
 tags:
   - person
+  - currentPriority
 ---
 
 ## Context

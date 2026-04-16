@@ -7,6 +7,7 @@ cadence: as-needed
 owner: "[[Savannah Kruger]]"
 tags:
   - person
+  - currentPriority
 ---
 
 ## Context
