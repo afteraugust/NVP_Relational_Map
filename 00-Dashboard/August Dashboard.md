@@ -254,8 +254,16 @@ const isPriority = (p) => (p.file.tags || []).includes("#currentPriority");
 const stripLink = (v) => String(v).replace(/\[\[|\]\]/g, "").split("|")[0].trim();
 const asArray = (v) => v ? (Array.isArray(v) ? v : [v]) : [];
 
+const teamExclude = new Set([
+  "August Elliott",
+  "Savannah Kruger",
+  "MacKenzie Schuller",
+  "Shani Graham",
+]);
+
 const priorityPeople = dv.pages('"People"').where(p => p.type === "person" && isPriority(p));
-const allPeople = dv.pages('"People"').where(p => p.type === "person");
+const allPeople = dv.pages('"People"')
+  .where(p => p.type === "person" && !teamExclude.has(p.file.name));
 
 const pathToPerson = new Map();
 const nameToPerson = new Map();
