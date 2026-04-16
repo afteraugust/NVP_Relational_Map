@@ -15,7 +15,7 @@ tags:
 Who they are and how we connected:
 
 Consistently mentioned as someone we should meet
-Climate / resilience activist, tied into the Latino community in [[Boulder County]]
+Climate / resilience activist, tied into the Latino community in Boulder 
 ## Key Contacts
 Who they know that matters to us:
 
