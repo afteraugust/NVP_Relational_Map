@@ -26,6 +26,6 @@ What we learned or what shifted:
 - She really likes us and loved the approach we're taking. 
 
 ## Action Items
-- [ ] Offer to meet with her team and teach neighborhood things. 
+- [x] Offer to meet with her team and teach neighborhood things. ✅ 2026-04-21
 - [ ] Ask for intros to mobile home parks. 
 

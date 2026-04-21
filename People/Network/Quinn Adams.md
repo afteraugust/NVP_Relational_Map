@@ -10,6 +10,8 @@ owner: "[[null]]"
 tags:
   - person
 ---
+adamsq@bouldercolorado.gov
+720-425-6737
 
 ## Context
 Who they are and how we connected:
