@@ -2,7 +2,7 @@
 type: person
 role: NVP-team
 orgs:
-  - "[[Neighborhood Village Project NVP]]"
+  - "[[Neighborhood Village Project]]"
 cadence: 
 owner: "[[August Elliott]]"
 tags:

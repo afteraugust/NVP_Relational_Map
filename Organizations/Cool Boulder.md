@@ -1,15 +1,14 @@
 ---
 type: organization
-category: 
+category: government
 members:
   - "[[]]"
-  - "[[Trish Becker-Hafnor]]"
 partners-with:
-  - "[[]]"
-relevance:
-  - 
+  - "[[City of Boulder]]"
+relevance: 
 tags:
   - organization
+  - currentPriority
 ---
 
 ## About
@@ -18,9 +17,7 @@ What this org does and why it matters to our work:
 
 ## Key People
 Our contacts there and their roles:
-[[Trish Becker-Hafnor]] 
-- Executive Director for [[CoHous]]
-- Board Member for [[Neighborhood Village Project]]
+- [[Quinn Adams]] 
 
 ## Collaboration History
 Past and current ways we've worked together:

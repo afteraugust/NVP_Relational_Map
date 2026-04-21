@@ -1,9 +1,9 @@
 ---
 type: person
-role: 
+role: govt-official
 orgs:
-  - "[[]]"
-  - "[[Neighborhood Village Project]]"
+  - "[[City of Boulder]]"
+  - "[[Cool Boulder]]"
 introduced-by: "[[]]"
 cadence: 
 owner: "[[null]]"
@@ -21,4 +21,4 @@ Who they know that matters to us:
 
 ## Relationship Notes
 Nature of relationship, what they care about, how we can help each other:
-
+- [[Mesa Sabreen]]
