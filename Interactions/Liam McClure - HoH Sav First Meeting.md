@@ -1,6 +1,6 @@
 ---
 type: interaction
-date: 2026-04-09
+date: 2026-04-22
 participants:
   - "[[Savannah Kruger]]"
   - "[[Liam McClure]]"
